@@ -8,15 +8,15 @@
 
 # Ignore everything in "plugins" except certain plugins. #
 plugins/*
-!plugins/dumplinghub-site-functionality/
+!plugins/dumplinghub_site-functionality/
 !plugins/biz-hours-widget/
 
 # Ignore everything in "themes" except the active theme. #
 themes/*
-!themes/dumplinghub-site/
+!themes/dumplinghub_site/
 
 # Ignore packages #
-themes/dumplinghub-site/node_modules/
+themes/dumplinghub_site/node_modules/
 
 # Ignore OS files #
 .DS_Store
