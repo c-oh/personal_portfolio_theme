@@ -5,18 +5,7 @@
  * @package dumplinghub-site_Theme
  */
 get_header(); ?>
-
-
-<script src="typed.js"></script>
-<script>
-  $(function(){
-      $(".element").typed({
-        strings: ["First sentence.", "Second sentence."],
-        typeSpeed: 0
-      });
-  });
-</script>
-...
-
-<div class="element"></div>
-<?php get_footer();?>
+  <div class="text">
+    <h3 class="typing-animation"> I am <span id="typewrite"> </span></h3>
+  </div>
+  <?php get_footer();?>

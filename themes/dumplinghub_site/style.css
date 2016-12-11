@@ -223,6 +223,27 @@ th {
 /*--------------------------------------------------------------
 # Embedded Fonts
 --------------------------------------------------------------*/
+@font-face {
+  font-family: 'roboto';
+  src: url("../../assets/fonts/roboto/Roboto-Regular-webfont.eot");
+  src: url("../../assets/fonts/roboto/Roboto-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/roboto/Roboto-Regular-webfont.woff") format("woff"), url("../../assets/fonts/roboto/Roboto-Regular-webfont.ttf") format("truetype"), url("../../assets/fonts/roboto/Roboto-Regular-webfont.svg#robotoregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'roboto';
+  src: url("../../assets/fonts/roboto/Roboto-Light-webfont.eot");
+  src: url("../../assets/fonts/roboto/Roboto-Light-webfont.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/roboto/Roboto-Light-webfont.woff") format("woff"), url("../../assets/fonts/roboto/Roboto-Light-webfont.ttf") format("truetype"), url("../../assets/fonts/roboto/Roboto-Light-webfont.svg#robotolight") format("svg");
+  font-weight: 100;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'roboto';
+  src: url("../../assets/fonts/roboto/Roboto-Bold-webfont.eot");
+  src: url("../../assets/fonts/roboto/Roboto-Bold-webfont.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/roboto/Roboto-Bold-webfont.woff") format("woff"), url("../../assets/fonts/roboto/Roboto-Bold-webfont.ttf") format("truetype"), url("../../assets/fonts/roboto/Roboto-Bold-webfont.svg#robotobold") format("svg");
+  font-weight: bold;
+  font-style: normal; }
+
 /*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
@@ -232,7 +253,7 @@ input,
 select,
 textarea {
   color: #404040;
-  font-family: sans-serif;
+  font-family: "roboto" sans-serif;
   font-size: 16px;
   font-size: 1rem;
   line-height: 1.5; }
@@ -404,8 +425,23 @@ textarea {
   padding-left: 3px;
   width: 100%; }
 
-.testing {
-  color: burlywood; }
+.text {
+  text-align: center;
+  padding-top: 100px;
+  color: black;
+  font: 3rem "roboto" sans-serif;
+  font-weight: bold; }
+
+@keyframes blink {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+.cursor {
+  animation: blink 0.7s infinite; }
 
 *,
 *::before,

@@ -1,3 +1,47 @@
-.testing{
-    color:burlywood; 
+.text {
+    text-align: center;
+    padding-top: 100px;
+    color: black;
+    font: 3rem $font__main;
+    font-weight: bold;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.cursor {
+    animation: blink 0.7s infinite;
 }
