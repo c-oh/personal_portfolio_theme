@@ -8,3 +8,5 @@ get_header(); ?>
 <section class = "testing">
 I like eating pizza
 </section>
+
+<?php get_footer();?>
