@@ -25,7 +25,7 @@ get_header(); ?>
             <p>
                 <?php echo $term->description ?> </p>
             <a href="<?php echo $url ?>" class='btn'>
-                <?php echo $term->name ?> Stuff </a>
+                <?php echo $term->name ?></a>
         </div>
         <?php endforeach ?>
         </section>
