@@ -1,16 +1,13 @@
 <?php /* Template Name: About Page */ ?>
+
 <?php get_header(); ?>
 <button onclick="history.go(-1);" class="back"> <i class="fa fa-arrow-left" aria-hidden="true"></i>  Back</button>
 <section class="about-hero">
 
-    <h6>  <?php the_title();?> </h6>
+    <h6>  <?php the_title();?> Me &darr;</h6>
 </section>
 
-<section class="intro">
-  <div class="container">
-    <h1>Vertical Timeline &darr;</h1>
-  </div>
-</section>
+
 
 <section class="timeline">
   <ul>
