@@ -2,7 +2,7 @@
 /**
  * The template for displaying all single project posts.
  *
- * @package RED_Starter_Theme
+ * @package dumplinghub_Theme
  */
 get_header(); ?>
 	<section id="primary" class="content-area-sp">
@@ -16,15 +16,7 @@ get_header(); ?>
 					<h2 class="single-project-title">
 						<?php the_title();?>
 					</h2>
-					<p class="sp-price">
-						<?php echo CFS()->get( 'project_price' ); ?>
-					</p>
 					<p class="sp-description" <?php the_content();?> </>
-					<div class="social-media-button">
-						<p class="white-link"><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i> Like</a></p>
-						<p class="white-link"><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i> Tweet</a></p>
-						<p class="white-link"><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i> Pin</a></p>
-					</div>
 				</div>
 			</section>
 			<?php

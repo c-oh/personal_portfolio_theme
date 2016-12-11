@@ -5,7 +5,7 @@
  * @link  http://codex.wordpress.org/Function_Reference/register_post_type
  */
 // Register Project Post Type 
-function register_Projects_post_type() {
+function register_projects_post_type() {
 	$labels = array(
 		'name'                  => 'Projects',
 		'singular_name'         => 'Project',
@@ -31,11 +31,11 @@ function register_Projects_post_type() {
 		'uploaded_to_this_item' => 'Uploaded to this Project',
 		'items_list'            => 'Projects list',
 		'items_list_navigation' => 'Projects list navigation',
-		'filter_items_list'     => 'Filter Projects list',
+		'filter_items_list'     => 'Filter projects list',
 	);
 	$args = array(
-		'label'                 => 'project',
-		'description'           => 'projects completed by me',
+		'label'                 => 'Project',
+		'description'           => 'Projects completed by me',
 		'labels'                => $labels,
 		'supports'              => array( 'title', 'editor', 'thumbnail', ),
 		'hierarchical'          => false,
@@ -43,7 +43,7 @@ function register_Projects_post_type() {
 		'show_ui'               => true,
 		'show_in_menu'          => true,
 		'menu_position'         => 10,
-		'menu_icon'             => 'dashicons-cart',
+		'menu_icon'             => 'dashicons-pressthis',
 		'show_in_admin_bar'     => true,
 		'show_in_nav_menus'     => true,
 		'can_export'            => false,

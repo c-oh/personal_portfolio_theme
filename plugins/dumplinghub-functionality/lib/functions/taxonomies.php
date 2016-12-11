@@ -5,7 +5,7 @@
  * @link  http://codex.wordpress.org/Function_Reference/register_taxonomy
  */
 // Register Project Project Type Taxonomy
-function register_Project_type_taxonomy_() {
+function register_project_type_taxonomy_() {
 	$labels = array(
 		'name'                       => 'Project Types',
 		'singular_name'              => 'Project Type',

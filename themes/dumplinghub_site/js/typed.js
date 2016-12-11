@@ -15,10 +15,10 @@ document.addEventListener('DOMContentLoaded',function(event){
   // type one text in the typwriter
   // keeps calling itself until the text is finished
   function typeWriter(text, i, fnCallback) {
-    // chekc if text isn't finished yet
+    // check if text isn't finished yet
     if (i < (text.length)) {
       // add next character to h1
-     document.getElementById("typewrite").innerHTML = text.substring(0, i+1);
+     document.getElementById("typewrite").innerHTML =text.substring(0, i+1);
 
       // wait for a while and call this function again for next character
       setTimeout(function() {

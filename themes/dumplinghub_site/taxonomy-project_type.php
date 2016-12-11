@@ -2,7 +2,7 @@
 /**
  * The template for displaying archive project type pages.
  *
- * @package RED_Starter_Theme
+ * @package dumplinghub_site_Theme
  */
 get_header(); ?>
 	<div id="primary" class="content-area">
@@ -24,8 +24,7 @@ get_header(); ?>
 						</a>
 					</div>
 					<div class="project-info">
-						<?php the_title('<p class="project-title">'); ?>........
-						<?php echo CFS()->get( 'project_price' ); ?>
+						<?php the_title('<p class="project-title">'); ?>
 					</div>
 				</div>
 				<!-- project-post -->

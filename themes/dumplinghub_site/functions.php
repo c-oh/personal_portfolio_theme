@@ -87,7 +87,7 @@ function dumplinghub_site_scripts() {
 	wp_enqueue_style('font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'); 
 	wp_enqueue_script( 'dumplinghub-site-skip-link-focus-fix', get_template_directory_uri() . '/build/js/skip-link-focus-fix.min.js', array(), '20130115', true );
 	wp_enqueue_script( 'jquery');
-	wp_enqueue_script( 'script', get_template_directory_uri() . '/js/script.js', array ( 'jquery' ), 1.1, true);
+	wp_enqueue_script( 'about-timeline', get_template_directory_uri() . '/js/about-timeline.js', array ( 'jquery' ), 1.1, true);
 	wp_enqueue_script( 'typed', get_template_directory_uri() . '/js/typed.js', array ( 'jquery' ), 1.1, true);
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {

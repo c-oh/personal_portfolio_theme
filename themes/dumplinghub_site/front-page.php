@@ -7,7 +7,7 @@
 get_header(); ?>
 <!--typesection-->
   <div class="text">
-    <h3 class="typing-animation"> I am <span id="typewrite"> </span></h3>
+    <h1 class="typing-animation"> I am <span id="typewrite"> </span></h1>
   </div>
 
 <!--show casing work-->

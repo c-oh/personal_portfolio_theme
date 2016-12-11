@@ -1,3 +1,3 @@
-# RED Functionality Plugin
+# Dumplinghub Functionality Plugin
 
-A template for a WordPress functionality plugin for RED Academy students.
+A custon made WordPress functionality plugin for my personal theme.
