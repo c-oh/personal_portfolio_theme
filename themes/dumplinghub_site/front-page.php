@@ -10,6 +10,26 @@ get_header(); ?>
     <h3 class="typing-animation"> I am <span id="typewrite"> </span></h3>
   </div>
 
+<!--show casing work-->
+<section class="taxonomy-loop">
+        <h2> Projects </h2>
+        <?php 
+		$taxonomies  = get_terms( array(
+			'taxonomy' => 'project_type',
+			'hide_empty' => true,
+			) );
+			foreach ( $taxonomies as $term ):?>
+        <div class="taxonomy-loop-wrapper">
+            <?php $url = get_term_link($term->slug, 'project_type') ?>
+            <!--<img src="<?php echo get_template_directory_uri() ?>/images/product-type-icons/<?php echo $term->slug?>.svg" alt= "product-type-icons">-->
+            <p>
+                <?php echo $term->description ?> </p>
+            <a href="<?php echo $url ?>" class='btn'>
+                <?php echo $term->name ?> Stuff </a>
+        </div>
+        <?php endforeach ?>
+        </section>
+
   <!--Journal section-->
   <section class="journal">
     <h2>journal</h2>
@@ -22,7 +42,6 @@ get_header(); ?>
           <?php the_post_thumbnail('category-thumb'); ?>
           <div class="info-area">
             <?php the_date(); ?>/
-            <?php comments_number();?>
             <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" class='title'>
               <?php the_title();?> </a>
             <a href="<?php the_permalink(); ?>" class='read-entry-btn'> Read More</a>
