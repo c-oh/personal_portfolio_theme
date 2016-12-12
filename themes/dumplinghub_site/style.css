@@ -427,21 +427,13 @@ textarea {
 
 .text {
   text-align: center;
-  padding-top: 100px;
+  padding: 50px 0px;
   color: black;
-  font: 3rem "roboto" sans-serif;
-  font-weight: bold; }
-
-@keyframes blink {
-  0% {
-    opacity: 1; }
-  50% {
-    opacity: 0; }
-  100% {
-    opacity: 1; } }
-
-.cursor {
-  animation: blink 0.7s infinite; }
+  font: 2rem "roboto" sans-serif;
+  font-weight: bold;
+  background-color: #F25F38; }
+  .text h1 {
+    height: 250px; }
 
 .page-template-about {
   /* EFFECTS
@@ -611,7 +603,7 @@ textarea {
     transform: translateY(-10px) translateX(0) rotate(-45deg);
     background: green; }
   .button-container span {
-    background: #F25F38;
+    background: #D8E2DC;
     border: none;
     height: 5px;
     width: 100%;

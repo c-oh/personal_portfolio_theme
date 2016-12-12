@@ -1,47 +1,12 @@
 .text {
     text-align: center;
-    padding-top: 100px;
+    padding: 50px 0px;
     color: black;
-    font: 3rem $font__main;
+    font: 2rem $font__main;
     font-weight: bold;
-}
-
-@keyframes blink {
-    0% {
-        opacity: 1;
-    }
-    50% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
+    background-color: $color-orange;
+    h1{
+       height: 250px;
     }
 }
 
-@-webkit-keyframes blink {
-    0% {
-        opacity: 1;
-    }
-    50% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-@-moz-keyframes blink {
-    0% {
-        opacity: 1;
-    }
-    50% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-.cursor {
-    animation: blink 0.7s infinite;
-}
