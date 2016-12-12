@@ -425,6 +425,12 @@ textarea {
   padding-left: 3px;
   width: 100%; }
 
+.page-template-default h2 {
+  text-align: center;
+  text-transform: uppercase;
+  font: 1.5rem "roboto" sans-serif;
+  font-weight: bold; }
+
 .text {
   text-align: center;
   padding: 50px 0px;
@@ -434,6 +440,21 @@ textarea {
   background-color: #F25F38; }
   .text h1 {
     height: 250px; }
+
+.taxonomy-loop-wrapper {
+  height: 350px;
+  width: 350px;
+  background-color: green;
+  margin: auto;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column; }
+  .taxonomy-loop-wrapper a, .taxonomy-loop-wrapper h5, .taxonomy-loop-wrapper h4 {
+    text-decoration: none;
+    font: 1rem "roboto" sans-serif;
+    color: black;
+    text-align: center; }
 
 .page-template-about {
   /* EFFECTS

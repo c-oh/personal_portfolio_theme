@@ -21,11 +21,11 @@ get_header(); ?>
 			foreach ( $taxonomies as $term ):?>
         <div class="taxonomy-loop-wrapper">
             <?php $url = get_term_link($term->slug, 'project_type') ?>
-            <!--<img src="<?php echo get_template_directory_uri() ?>/images/product-type-icons/<?php echo $term->slug?>.svg" alt= "product-type-icons">-->
-            <p>
-                <?php echo $term->description ?> </p>
-            <a href="<?php echo $url ?>" class='btn'>
-                <?php echo $term->name ?></a>
+            <h4> <?php echo $term->description ?> </h4>
+               <h5> <?php echo $term->name ?> </h5>
+                 <a href="<?php echo $url ?>">
+                  <p> View Projects </p>
+                 </a>
         </div>
         <?php endforeach ?>
         </section>

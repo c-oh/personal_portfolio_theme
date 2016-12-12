@@ -1,3 +1,12 @@
+.page-template-default {
+    h2 {
+        text-align: center;
+        text-transform: uppercase;
+        font: 1.5rem $font__main;
+        font-weight: bold;
+    }
+}
+
 .text {
     text-align: center;
     padding: 50px 0px;
@@ -5,8 +14,26 @@
     font: 2rem $font__main;
     font-weight: bold;
     background-color: $color-orange;
-    h1{
-       height: 250px;
+    h1 {
+        height: 250px;
     }
 }
 
+
+
+.taxonomy-loop-wrapper {
+    height: 350px;
+    width: 350px;
+    background-color: green;
+    margin: auto;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    a, h5, h4 {
+        text-decoration: none;
+        font: 1rem $font__main;
+        color: black;
+        text-align: center;
+    }
+}
