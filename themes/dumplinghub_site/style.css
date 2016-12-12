@@ -543,18 +543,10 @@ textarea {
       border-width: 8px 16px 8px 0;
       border-color: transparent #F45B69 transparent transparent; } }
 
-.site-header body {
-  background: green;
-  -webkit-font-smoothing: antialiased; }
-
 .site-header main {
   padding: 60px 15px;
   text-align: center;
   max-width: 100%; }
-
-@media screen and (min-width: 600px) {
-  .site-header h1 {
-    font-size: 3em; } }
 
 .site-header aside {
   position: fixed;
@@ -562,14 +554,12 @@ textarea {
   height: 100%;
   top: 0;
   left: 0;
-  background: linear-gradient(200deg, #27156E, #6A2A88, #9F4981);
-  opacity: 0;
+  background: green;
+  opacity: 1;
   visibility: hidden;
-  transition: all .5s ease;
-  z-index: 2; }
+  transition: all .5s ease; }
 
 .site-header .open {
-  opacity: 1;
   visibility: visible; }
 
 .site-header nav {
@@ -597,23 +587,6 @@ textarea {
         display: block;
         text-decoration: none;
         color: rgba(255, 255, 255, 0.5); }
-        .site-header nav ul li a:hover {
-          color: rgba(255, 255, 255, 0.9);
-          transform: scale(1.1); }
-          .site-header nav ul li a:hover:before {
-            visibility: visible;
-            transform: scaleX(1); }
-        .site-header nav ul li a:before {
-          content: "";
-          position: absolute;
-          width: 50%;
-          height: 2px;
-          bottom: 0;
-          left: 25%;
-          background: white;
-          visibility: hidden;
-          transform: scaleX(0);
-          transition: all 0.3s ease-in-out 0s; }
 
 .button-container {
   position: fixed;
@@ -628,15 +601,15 @@ textarea {
     opacity: .7; }
   .button-container.active .top {
     transform: translateY(10px) translateX(0) rotate(45deg);
-    background: #FFF; }
+    background: green; }
   .button-container.active .middle {
     opacity: 0;
-    background: #FFF; }
+    background: green; }
   .button-container.active .bottom {
     transform: translateY(-10px) translateX(0) rotate(-45deg);
-    background: #FFF; }
+    background: green; }
   .button-container span {
-    background: #FF5252;
+    background: #F25F38;
     border: none;
     height: 5px;
     width: 100%;
