@@ -263,9 +263,6 @@ h1, h2, h3, h4, h5, h6 {
   clear: both; }
 
 /* Copy */
-p {
-  margin-bottom: 1.5em; }
-
 dfn, cite, em, i {
   font-style: italic; }
 
@@ -444,17 +441,23 @@ textarea {
 .taxonomy-loop-wrapper {
   height: 350px;
   width: 350px;
-  background-color: green;
   margin: auto;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-direction: column;
-      flex-direction: column; }
-  .taxonomy-loop-wrapper a, .taxonomy-loop-wrapper h5, .taxonomy-loop-wrapper h4 {
-    text-decoration: none;
-    font: 1rem "roboto" sans-serif;
-    color: black;
-    text-align: center; }
+  background-color: green; }
+  .taxonomy-loop-wrapper .taxonomy-text-container {
+    height: 100%;
+    padding: 15px;
+    margin: auto; }
+    .taxonomy-loop-wrapper .taxonomy-text-container a,
+    .taxonomy-loop-wrapper .taxonomy-text-container h5,
+    .taxonomy-loop-wrapper .taxonomy-text-container h4 {
+      text-decoration: none;
+      font: 1rem "roboto" sans-serif;
+      color: black;
+      text-align: center; }
+    .taxonomy-loop-wrapper .taxonomy-text-container p {
+      border: 1px solid #000;
+      padding: 10px 16px;
+      margin: 45px 72px; }
 
 .page-template-about {
   /* EFFECTS

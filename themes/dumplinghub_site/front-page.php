@@ -20,12 +20,14 @@ get_header(); ?>
 			) );
 			foreach ( $taxonomies as $term ):?>
         <div class="taxonomy-loop-wrapper">
+          <div class="taxonomy-text-container">
             <?php $url = get_term_link($term->slug, 'project_type') ?>
             <h4> <?php echo $term->description ?> </h4>
                <h5> <?php echo $term->name ?> </h5>
                  <a href="<?php echo $url ?>">
                   <p> View Projects </p>
                  </a>
+      </div>
         </div>
         <?php endforeach ?>
         </section>
