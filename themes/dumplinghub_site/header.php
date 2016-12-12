@@ -23,21 +23,22 @@
 				<?php esc_html( 'Skip to content' ); ?>
 			</a>
 			<header id="masthead" class="site-header" role="banner">
-				
-				<div class="overlay overlay-contentscale">
-					<button type="button" class="overlay-close">Close</button>
-				<nav id="site-navigation" class="main-navigation" role="navigation">
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-					<!--- <img src="<?php echo get_template_directory_uri() ?>/images/logos/inhabitent-logo-tent.svg" alt= "Company logo"> </a> -->
-					<div class="nav-menu-mini">
-						<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
-						<div class="header-search">
-							<?php get_search_form(); ?>
-						</div>
-					</div>
-		</nav>
+			
+				<!-- hamburger button -->
+			<div class="button-container" id="toggle">
+					<span class="top"></span>
+					<span class="middle"></span>
+					<span class="bottom"></span>
 				</div>
-		<!-- #site-navigation -->
+				<aside>
+				 
+	
+						<!-- #site-navigation -->
+					<nav id="site-navigation" class="main-navigation" role="navigation">
+						<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+					</nav>
+					</aside>
+
 		</header>
 		</div>
 		<!-- #masthead -->

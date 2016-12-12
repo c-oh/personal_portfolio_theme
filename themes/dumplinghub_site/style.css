@@ -543,86 +543,110 @@ textarea {
       border-width: 8px 16px 8px 0;
       border-color: transparent #F45B69 transparent transparent; } }
 
-/* Overlay style 5 */
-.overlay {
+.site-header body {
+  background: green;
+  -webkit-font-smoothing: antialiased; }
+
+.site-header main {
+  padding: 60px 15px;
+  text-align: center;
+  max-width: 100%; }
+
+@media screen and (min-width: 600px) {
+  .site-header h1 {
+    font-size: 3em; } }
+
+.site-header aside {
   position: fixed;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
-  background: #F6FEDB; }
-
-/* Overlay closing cross */
-.overlay .overlay-close {
-  width: 80px;
-  height: 80px;
-  position: absolute;
-  right: 20px;
-  top: 20px;
-  overflow: hidden;
-  border: none;
-  background: url(../../assets/images/cross.png) no-repeat center center;
-  text-indent: 200%;
-  color: transparent;
-  outline: none;
-  z-index: 100; }
-
-/* Menu style */
-.overlay nav {
-  text-align: center;
-  position: relative;
-  top: 50%;
-  height: 60%;
-  transform: translateY(-50%); }
-
-.overlay ul {
-  list-style: none;
-  padding: 0;
-  margin: 0 auto;
-  display: inline-block;
-  height: 100%;
-  position: relative; }
-
-.overlay ul li {
-  display: block;
-  height: 20%;
-  height: calc(100% / 5);
-  min-height: 54px;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden; }
-
-.overlay ul li a {
-  font-size: 54px;
-  font-weight: 300;
-  display: block;
-  color: black;
-  transition: color 0.2s;
-  text-decoration: none; }
-
-.overlay ul li a:hover,
-.overlay ul li a:focus {
-  color: purple;
-  cursor: hand; }
-
-/* Effects */
-.overlay-scale {
-  visibility: hidden;
+  background: linear-gradient(200deg, #27156E, #6A2A88, #9F4981);
   opacity: 0;
-  transform: scale(0.9);
-  transition: transform 0.2s, opacity 0.2s, visibility 0s 0.2s; }
+  visibility: hidden;
+  transition: all .5s ease;
+  z-index: 2; }
 
-.overlay-scale.open {
-  visibility: visible;
+.site-header .open {
   opacity: 1;
-  transform: scale(1);
-  transition: transform 0.4s, opacity 0.4s; }
+  visibility: visible; }
 
-@media screen and (max-height: 30.5em) {
-  .overlay nav {
-    height: 70%;
-    font-size: 34px; }
-  .overlay ul li {
-    min-height: 34px; } }
+.site-header nav {
+  text-align: center;
+  height: 95vh;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-pack: center;
+      justify-content: center; }
+  .site-header nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none; }
+    .site-header nav ul li {
+      -ms-flex-align: center;
+          align-items: center;
+      -ms-flex: 1;
+          flex: 1;
+      line-height: 20vh; }
+      .site-header nav ul li a {
+        font-size: 1.5em;
+        transition: all 0.5s ease;
+        display: block;
+        text-decoration: none;
+        color: rgba(255, 255, 255, 0.5); }
+        .site-header nav ul li a:hover {
+          color: rgba(255, 255, 255, 0.9);
+          transform: scale(1.1); }
+          .site-header nav ul li a:hover:before {
+            visibility: visible;
+            transform: scaleX(1); }
+        .site-header nav ul li a:before {
+          content: "";
+          position: absolute;
+          width: 50%;
+          height: 2px;
+          bottom: 0;
+          left: 25%;
+          background: white;
+          visibility: hidden;
+          transform: scaleX(0);
+          transition: all 0.3s ease-in-out 0s; }
+
+.button-container {
+  position: fixed;
+  top: 5%;
+  right: 2%;
+  height: 27px;
+  width: 35px;
+  cursor: pointer;
+  z-index: 100;
+  transition: opacity .25s ease; }
+  .button-container:hover {
+    opacity: .7; }
+  .button-container.active .top {
+    transform: translateY(10px) translateX(0) rotate(45deg);
+    background: #FFF; }
+  .button-container.active .middle {
+    opacity: 0;
+    background: #FFF; }
+  .button-container.active .bottom {
+    transform: translateY(-10px) translateX(0) rotate(-45deg);
+    background: #FFF; }
+  .button-container span {
+    background: #FF5252;
+    border: none;
+    height: 5px;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0; }
+    .button-container span:nth-of-type(2) {
+      top: 10px; }
+    .button-container span:nth-of-type(3) {
+      top: 20px; }
 
 /*--------------------------------------------------------------
 # Accessibility

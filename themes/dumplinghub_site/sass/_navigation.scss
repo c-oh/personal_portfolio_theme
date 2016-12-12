@@ -1,103 +1,136 @@
-/* Overlay style 5 */
-.overlay {
-	position: fixed;
-	width: 100%;
-	height: 100%;
-	top: 0;
-	left: 0;
-	background: #F6FEDB;
-
-}
-
-/* Overlay closing cross */
-.overlay .overlay-close {
-	width: 80px;
-	height: 80px;
-	position: absolute;
-	right: 20px;
-	top: 20px;
-	overflow: hidden;
-	border: none;
-	background: url(../../assets/images/cross.png) no-repeat center center;
-	text-indent: 200%;
-	color: transparent;
-	outline: none;
-	z-index: 100;
-}
-
-/* Menu style */
-.overlay nav {
-	text-align: center;
-	position: relative;
-	top: 50%;
-	height: 60%;
-	-webkit-transform: translateY(-50%);
-	transform: translateY(-50%);
-}
-
-.overlay ul {
-	list-style: none;
-	padding: 0;
-	margin: 0 auto;
-	display: inline-block;
-	height: 100%;
-	position: relative;
-
-}
-
-.overlay ul li {
-	display: block;
-	height: 20%;
-	height: calc(100% / 5);
-	min-height: 54px;
-	-webkit-backface-visibility: hidden;
-	backface-visibility: hidden;
-
-}
-
-.overlay ul li a {
-	font-size: 54px;
-	font-weight: 300;
-	display: block;
-	color: black;
-	-webkit-transition: color 0.2s;
-	transition: color 0.2s;
-	text-decoration: none;
-}
-
-.overlay ul li a:hover,
-.overlay ul li a:focus {
-	color: purple;
-	cursor: hand;
-}
-
-/* Effects */
-.overlay-scale {
-	visibility: hidden;
-	opacity: 0;
-	-webkit-transform: scale(0.9);
-	transform: scale(0.9);
-	-webkit-transition: -webkit-transform 0.2s, opacity 0.2s, visibility 0s 0.2s;
-	transition: transform 0.2s, opacity 0.2s, visibility 0s 0.2s;
-}
-
-.overlay-scale.open {
-	visibility: visible;
-	opacity: 1;
-	-webkit-transform: scale(1);
-	transform: scale(1);	
-	-webkit-transition: -webkit-transform 0.4s, opacity 0.4s;
-	transition: transform 0.4s, opacity 0.4s;
-}
-
-@media screen and (max-height: 30.5em) {
-	.overlay nav {
-		height: 70%;
-		font-size: 34px;
+$color-background: #F5F5F5;
+$color-main: #FF5252;
+$color-active: #FFF;
+$color-link: #FFF;
+$button-height: 27px;
+$button-width: 35px;
+.site-header {
+	body {
+		background: green;
+		-webkit-font-smoothing: antialiased;
 	}
-	.overlay ul li {
-		min-height: 34px;
+	main {
+		padding: 60px 15px;
+		text-align: center;
+		max-width: 100%;
 	}
+	@media screen and (min-width: 600px) {
+		h1 {
+			font-size: 3em;
+		}
+	}
+	aside {
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		background: linear-gradient(200deg, #27156E, #6A2A88, #9F4981);
+		opacity: 0;
+		visibility: hidden;
+		transition: all .5s ease;
+		z-index: 2;
+	}
+	.open {
+		opacity: 1;
+		visibility: visible;
+	}
+	nav {
+		text-align: center;
+		height: 95vh;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		ul {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			li {
+				align-items: center;
+				flex: 1;
+				line-height: 20vh;
+				a {
+					font-size: 1.5em;
+					transition: all 0.5s ease;
+					display: block;
+					text-decoration: none;
+					color: rgba(255, 255, 255, .5);
+					&:hover {
+						color: rgba(255, 255, 255, .9);
+						transform: scale(1.1);
+						&:before {
+							visibility: visible;
+							transform: scaleX(1);
+						}
+					}
+					&:before {
+						content: "";
+						position: absolute;
+						width: 50%;
+						height: 2px;
+						bottom: 0;
+						left: 25%;
+						background: white;
+						visibility: hidden;
+						transform: scaleX(0);
+						transition: all 0.3s ease-in-out 0s;
+					}
+				}
+			}
+		}
+	}
+	}
+
+
+ 
+.button-container {
+  position: fixed;
+  top: 5%;
+  right: 2%;
+  height: $button-height;
+  width: $button-width;
+  cursor: pointer;
+  z-index: 100;
+  transition: opacity .25s ease;
+  
+  
+  &:hover {
+    opacity: .7;
+  }
+  
+  &.active {
+    .top {
+      transform: translateY(10px) translateX(0) rotate(45deg);
+      background: $color-active;
+    }
+    .middle {
+      opacity: 0;
+      background: $color-active;
+    }
+    
+    .bottom {
+      transform: translateY(-10px) translateX(0) rotate(-45deg);
+      background: $color-active;
+    }
+  }
+  
+  span {
+  background: $color-main;
+  border: none;
+  height: 5px;
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0;
+
+
+    
+    &:nth-of-type(2) {
+      top: 10px;
+    }
+    
+    &:nth-of-type(3) {
+      top: 20px;
+    }
+  }
 }
-
-
