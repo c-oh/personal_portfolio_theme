@@ -12,11 +12,13 @@
 		top: 0;
 		left: 0;
 		background: $color-cream;
-		opacity: 1;
+		opacity: 0;
 		visibility: hidden;
 		transition: all .5s ease;
+		z-index: 2;
 	}
 	.open {
+		opacity: 1;
 		visibility: visible;
 	}
 	nav {
@@ -35,6 +37,7 @@
 				line-height: 20vh;
 				a {
 					font-size: 1.5em;
+					font-family: $font__main;
 					transition: all 0.5s ease;
 					display: block;
 					text-decoration: none;
@@ -45,8 +48,6 @@
 	}
 	}
 
-
- 
 .button-container {
   position: fixed;
   top: 5%;

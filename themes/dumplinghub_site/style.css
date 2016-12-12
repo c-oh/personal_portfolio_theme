@@ -443,18 +443,17 @@ textarea {
 .cursor {
   animation: blink 0.7s infinite; }
 
-*,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box; }
-
 .page-template-about {
   /* EFFECTS
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
   /* GENERAL MEDIA QUERIES
 –––––––––––––––––––––––––––––––––––––––––––––––––– */ }
+  .page-template-about *,
+  .page-template-about *::before,
+  .page-template-about *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; }
   .page-template-about body {
     font: 1rem "roboto" sans-serif;
     color: #fff;
@@ -555,11 +554,13 @@ textarea {
   top: 0;
   left: 0;
   background: #FFF3AF;
-  opacity: 1;
+  opacity: 0;
   visibility: hidden;
-  transition: all .5s ease; }
+  transition: all .5s ease;
+  z-index: 2; }
 
 .site-header .open {
+  opacity: 1;
   visibility: visible; }
 
 .site-header nav {
@@ -583,6 +584,7 @@ textarea {
       line-height: 20vh; }
       .site-header nav ul li a {
         font-size: 1.5em;
+        font-family: "roboto" sans-serif;
         transition: all 0.5s ease;
         display: block;
         text-decoration: none;
