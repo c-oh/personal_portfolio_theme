@@ -442,7 +442,8 @@ textarea {
   height: 350px;
   width: 350px;
   margin: auto;
-  background-color: green; }
+  background-color: green;
+  margin-bottom: 15px; }
   .taxonomy-loop-wrapper .taxonomy-text-container {
     height: 100%;
     padding: 15px;
@@ -458,6 +459,8 @@ textarea {
       border: 1px solid #000;
       padding: 10px 16px;
       margin: 45px 72px; }
+      .taxonomy-loop-wrapper .taxonomy-text-container p:hover {
+        background-color: yellow; }
 
 .page-template-about {
   /* EFFECTS

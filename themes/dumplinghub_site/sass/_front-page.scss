@@ -24,7 +24,7 @@
     width: 350px;
     margin: auto;
     background-color: green;
-
+    margin-bottom: 15px;
 
 .taxonomy-text-container {
    height:100%;
@@ -44,6 +44,9 @@
        border: 1px solid #000;
     padding: 10px 16px;
     margin: 45px 72px;
+    &:hover{
+        background-color:yellow;
+    }
     }
 }
 }
