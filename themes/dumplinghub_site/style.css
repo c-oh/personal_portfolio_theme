@@ -554,7 +554,7 @@ textarea {
   height: 100%;
   top: 0;
   left: 0;
-  background: green;
+  background: #FFF3AF;
   opacity: 1;
   visibility: hidden;
   transition: all .5s ease; }
@@ -586,7 +586,7 @@ textarea {
         transition: all 0.5s ease;
         display: block;
         text-decoration: none;
-        color: rgba(255, 255, 255, 0.5); }
+        color: black; }
 
 .button-container {
   position: fixed;
