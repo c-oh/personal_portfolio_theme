@@ -1,132 +1,151 @@
-/*--------------------------------------------------------------
-# Navigation
---------------------------------------------------------------*/
 
-/* Links */
-
-a {
-	color: $color__link;
-
-	&:visited {
-		color: $color__link-visited;
-	}
-	&:hover,
-	&:focus,
-	&:active {
-		color: $color__link-hover;
-	}
-	&:focus {
-		outline: thin dotted;
-	}
-	&:hover,
-	&:active {
-		outline: 0;
-	}
-}
-
-/* Menus */
-
-.main-navigation {
-	clear: both;
-	display: block;
-	float: left;
+/* Overlay style */
+.overlay {
+	position: fixed;
 	width: 100%;
-
-	ul {
-		display: none;
-		list-style: none;
-		margin: 0;
-		padding-left: 0;
-
-		ul {
-			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-			float: left;
-			position: absolute;
-			top: $base__space-unit;
-			left: -999em;
-			z-index: 99999;
-
-			ul {
-				left: -999em;
-				top: 0;
-			}
-
-			li {
-				&:hover > ul,
-				&.focus > ul {
-					left: 100%;
-				}
-			}
-
-			a {
-				width: 200px;
-			}
-
-			:hover > a,
-			.focus > a {
-			}
-
-			a:hover,
-			a.focus {
-			}
-		}
-
-		li:hover > ul,
-		li.focus > ul {
-			left: auto;
-		}
-	}
-	li {
-		float: left;
-		position: relative;
-
-		&:hover > a,
-		&.focus > a {
-		}
-	}
-	a {
-		display: block;
-		text-decoration: none;
-	}
-
-	.current_page_item > a,
-	.current-menu-item > a,
-	.current_page_ancestor > a {
-	}
+	height: 100%;
+	top: 0;
+	left: 0;
+	background: rgba(153,204,51,0.9);
 }
 
-/* Small menu. */
-.menu-toggle,
-.main-navigation.toggled ul {
+/* Overlay closing cross */
+.overlay .overlay-close {
+	width: 80px;
+	height: 80px;
+	position: absolute;
+	right: 20px;
+	top: 20px;
+	overflow: hidden;
+	border: none;
+	background: url(../img/cross.png) no-repeat center center;
+	text-indent: 200%;
+	color: transparent;
+	outline: none;
+	z-index: 100;
+}
+
+/* Menu style */
+.overlay nav {
+	text-align: center;
+	position: relative;
+	top: 50%;
+	height: 60%;
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+.overlay ul {
+	list-style: none;
+	padding: 0;
+	margin: 0 auto;
+	display: inline-block;
+	height: 100%;
+	position: relative;
+}
+
+.overlay ul li {
 	display: block;
+	height: 20%;
+	height: calc(100% / 5);
+	min-height: 54px;
 }
 
-@media screen and (min-width: 37.5em) {
-	.menu-toggle {
-		display: none;
+.overlay ul li a {
+	font-size: 54px;
+	font-weight: 300;
+	display: block;
+	color: #fff;
+	-webkit-transition: color 0.2s;
+	transition: color 0.2s;
+}
+
+.overlay ul li a:hover,
+.overlay ul li a:focus {
+	color: #f0f0f0;
+}
+
+/* Effects */
+body {
+	background: #ddd;
+}
+
+.container {
+	background: #fff;
+	-webkit-transition: -webkit-transform 0.5s;
+	transition: transform 0.5s;
+}
+
+.container.overlay-open {
+	-webkit-transform: scale(0.8);
+	transform: scale(0.8);
+}
+
+.overlay-contentscale {
+	visibility: hidden;
+	-webkit-transform: translateY(100%);
+	transform: translateY(100%);
+	-webkit-transition: -webkit-transform 0.5s, visibility 0s 0.5s;
+	transition: transform 0.5s, visibility 0s 0.5s;
+}
+
+.overlay-contentscale.open {
+	visibility: visible;
+	-webkit-transform: translateY(0%);
+	transform: translateY(0%);
+	-webkit-transition: -webkit-transform 0.5s;
+	transition: transform 0.5s;
+}
+
+@media screen and (max-height: 30.5em) {
+	.overlay nav {
+		height: 70%;
+		font-size: 34px;
 	}
-	.main-navigation ul {
-		display: block;
+	.overlay ul li {
+		min-height: 34px;
 	}
 }
 
-.comment-navigation,
-.posts-navigation,
-.post-navigation {
 
-	.site-main & {
-		margin: 0 0 $base__space-unit;
-		overflow: hidden;
-	}
 
-	.nav-previous {
-		float: left;
-		width: 50%;
-	}
 
-	.nav-next {
-		float: right;
-		text-align: right;
-		width: 50%;
+
+--------------
+.site-header {
+	top: 9px;
+	width: 100%;
+	border-bottom: 1px solid lightgrey;
+	position: fixed;
+	z-index: 999;
+	background-color: rgba(255, 255, 255, 0.6);
+}
+
+.main-navigation{
+	.nav-menu-mini {
+	display: flex;
+	align-items: flex-end;
+	margin-right: 91px;
+}
+.header-search fieldset {
+	border: none;
+	margin-top: 7px;
+	.icon-search {
+		display: inline;
 	}
+	.fa {
+		font-size: 1rem;
+		color: $color__link-hover
+	}
+	input[type="search"] {
+		border: none;
+		width: 0px;
+		padding: 0;
+		text-transform: uppercase;
+		font-size: 1rem;
+		&:focus {
+			outline: none;
+		}
+	}
+}
 }

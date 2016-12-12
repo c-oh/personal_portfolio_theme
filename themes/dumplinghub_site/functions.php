@@ -89,7 +89,8 @@ function dumplinghub_site_scripts() {
 	wp_enqueue_script( 'jquery');
 	wp_enqueue_script( 'about-timeline', get_template_directory_uri() . '/js/about-timeline.js', array ( 'jquery' ), 1.1, true);
 	wp_enqueue_script( 'typed', get_template_directory_uri() . '/js/typed.js', array ( 'jquery' ), 1.1, true);
-
+	wp_enqueue_script( 'scripts', get_template_directory_uri() . '/js/scripts.js', array ( 'jquery' ), 1.1, true);
+	wp_enqueue_script( 'navmenu', get_template_directory_uri() . '/js/navmenu.js', array ( 'jquery' ), 1.1, true);
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
