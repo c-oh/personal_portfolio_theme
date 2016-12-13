@@ -10,4 +10,10 @@
             color: $color__link-hover;
         }
     }
+     .copyright{
+            color: $color_red;
+            font: 1rem $font__main;
+            display:flex;
+            justify-content:space-around;
+        }
 }

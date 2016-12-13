@@ -9,7 +9,7 @@
 	</div>
 	<!-- #content -->
 	<footer id="colophon" class="site-footer" role="contentinfo">
-		<section class="footer-container">
+		<div class="footer-container">
 			<p>
 				<a href="<?php echo esc_url( 'https://github.com/dumplinghub' ); ?>"> <i class="fa fa-github" aria-hidden="true"></i></a>
 			</p>
@@ -19,7 +19,10 @@
 			<p>
 				<a href="<?php echo esc_url( 'adfsd@afads.com' ); ?>"> <i class="fa fa-envelope" aria-hidden="true"></i> </a>
 			</p>
-		</section>
+		</div>
+		<div class = "copyright">
+			<h3>&#169;Copyright Holly Cheng</h3>
+			</div>
 		<!-- .site-info -->
 	</footer>
 	<!-- #colophon -->
