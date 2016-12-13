@@ -1,4 +1,13 @@
-.site-footer{
-    background-color: $color__link-hover;
-    color:white;
+.site-footer {
+    background-color: $color-grey;
+    .footer-container {
+        margin: auto;
+        width: 200px;
+        display: flex;
+        justify-content: space-around;
+        .fa {
+            font-size: 1.5rem;
+            color: $color__link-hover;
+        }
+    }
 }

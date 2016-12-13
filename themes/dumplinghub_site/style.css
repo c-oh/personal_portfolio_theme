@@ -252,8 +252,6 @@ button,
 input,
 select,
 textarea {
-  color: #404040;
-  font-family: "roboto" sans-serif;
   font-size: 16px;
   font-size: 1rem;
   line-height: 1.5; }
@@ -437,6 +435,23 @@ textarea {
   background-color: #F25F38; }
   .text h1 {
     height: 250px; }
+  .text span {
+    border-right: .05em solid;
+    animation: caret 1s steps(1) infinite;
+    color: black; }
+
+@keyframes caret {
+  50% {
+    border-color: transparent; } }
+
+.taxonomy-loop {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+  @media (min-width: 1000px) {
+    .taxonomy-loop h2 {
+      width: 100%; } }
 
 .taxonomy-loop-wrapper {
   height: 350px;
@@ -444,6 +459,12 @@ textarea {
   margin: auto;
   background-color: green;
   margin-bottom: 15px; }
+  @media (min-width: 1000px) {
+    .taxonomy-loop-wrapper {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-direction: row;
+          flex-direction: row; } }
   .taxonomy-loop-wrapper .taxonomy-text-container {
     height: 100%;
     padding: 15px;
@@ -455,6 +476,8 @@ textarea {
       font: 1rem "roboto" sans-serif;
       color: black;
       text-align: center; }
+    .taxonomy-loop-wrapper .taxonomy-text-container h4 {
+      margin-top: 74px; }
     .taxonomy-loop-wrapper .taxonomy-text-container p {
       border: 1px solid #000;
       padding: 10px 16px;
@@ -811,5 +834,14 @@ object {
   display: block; }
 
 .site-footer {
-  background-color: midnightblue;
-  color: white; }
+  background-color: #D8E2DC; }
+  .site-footer .footer-container {
+    margin: auto;
+    width: 200px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around; }
+    .site-footer .footer-container .fa {
+      font-size: 1.5rem;
+      color: midnightblue; }

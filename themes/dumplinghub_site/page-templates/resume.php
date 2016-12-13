@@ -68,10 +68,15 @@
 <!---education -->
 
 <section class= "education">
+<div class= "education-title">
+    <h2>
+        <?php echo CFS()->get( 'education'); ?>
+    </h2>
+    </div>
 
 <div class= "resume-container">
     <h2>
-        <?php echo CFS()->get( 'school'); ?>
+        <?php echo CFS()->get( 'major'); ?>
     </h2>
     <h4>
         <?php echo CFS()->get( 'where_when'); ?>
@@ -81,7 +86,7 @@
 
 <div class= "resume-container">
     <h2>
-        <?php echo CFS()->get( 'school1'); ?>
+        <?php echo CFS()->get( 'major1'); ?>
     </h2>
     <h4>
         <?php echo CFS()->get( 'where_when1'); ?>
