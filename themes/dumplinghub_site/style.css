@@ -429,7 +429,7 @@ textarea {
 .text {
   text-align: center;
   padding: 50px 0px;
-  color: black;
+  color: #000;
   font: 2rem "roboto" sans-serif;
   font-weight: bold;
   background-color: #F25F38; }
@@ -438,7 +438,7 @@ textarea {
   .text span {
     border-right: .05em solid;
     animation: caret 1s steps(1) infinite;
-    color: black; }
+    color: #000; }
 
 @keyframes caret {
   50% {
@@ -449,15 +449,14 @@ textarea {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap; }
-  @media (min-width: 1000px) {
-    .taxonomy-loop h2 {
-      width: 100%; } }
+  .taxonomy-loop h2 {
+    width: 100%; }
 
 .taxonomy-loop-wrapper {
   height: 350px;
   width: 350px;
   margin: auto;
-  background-color: green;
+  background-color: #FFF3AF;
   margin-bottom: 15px; }
   @media (min-width: 1000px) {
     .taxonomy-loop-wrapper {
@@ -474,7 +473,7 @@ textarea {
     .taxonomy-loop-wrapper .taxonomy-text-container h4 {
       text-decoration: none;
       font: 1rem "roboto" sans-serif;
-      color: black;
+      color: #000;
       text-align: center; }
     .taxonomy-loop-wrapper .taxonomy-text-container h4 {
       margin-top: 74px; }
@@ -483,7 +482,7 @@ textarea {
       padding: 10px 16px;
       margin: 45px 72px; }
       .taxonomy-loop-wrapper .taxonomy-text-container p:hover {
-        background-color: yellow; }
+        background-color: #F25F38; }
 
 .page-template-about {
   /* EFFECTS
@@ -842,11 +841,18 @@ object {
     display: flex;
     -ms-flex-pack: distribute;
         justify-content: space-around; }
-    .site-footer .footer-container .fa {
-      font-size: 1.5rem;
-      color: midnightblue; }
-      .site-footer .footer-container .fa:hover {
-        color: #F25F38; }
+    .site-footer .footer-container a {
+      height: 32px;
+      width: 37px;
+      display: block;
+      border: 2px solid midnightblue; }
+      .site-footer .footer-container a i {
+        font-size: 1.5rem;
+        color: midnightblue;
+        padding: 2px 5px; }
+        .site-footer .footer-container a i:hover {
+          color: #F25F38;
+          background-color: transparent; }
   .site-footer .copyright {
     color: #b20000;
     font: 1rem "roboto" sans-serif;

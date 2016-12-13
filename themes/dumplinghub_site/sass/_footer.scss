@@ -5,18 +5,26 @@
         width: 200px;
         display: flex;
         justify-content: space-around;
-        .fa {
-            font-size: 1.5rem;
-            color: $color__link-hover;
-            &:hover{
-                color: $color-orange;
+        a {
+            height: 32px;
+            width: 37px;
+            display: block;
+            border: 2px solid $color__link-hover;
+            i {
+                font-size: 1.5rem;
+                color: $color__link-hover;
+                padding: 2px 5px;
+                &:hover {
+                    color: $color-orange;
+                    background-color: transparent;
+                }
             }
         }
     }
-     .copyright{
+    .copyright {
             color: $color_red;
             font: 1rem $font__main;
-            display:flex;
-            justify-content:space-around;
+            display: flex;
+            justify-content: space-around;
         }
 }

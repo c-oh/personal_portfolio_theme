@@ -10,7 +10,7 @@
 .text {
     text-align: center;
     padding: 50px 0px;
-    color: black;
+    color: $color_black;
     font: 2rem $font__main;
     font-weight: bold;
     background-color: $color-orange;
@@ -20,7 +20,7 @@
     span {
         border-right: .05em solid;
         animation: caret 1s steps(1) infinite;
-        color: black;
+        color: $color_black;
     }
     @keyframes caret {
         50% {
@@ -28,13 +28,12 @@
         }
     }
 }
-.taxonomy-loop{
+
+.taxonomy-loop {
     display: flex;
     flex-wrap: wrap;
-     h2{
-        @include desktop{
-            width: 100%;
-        }
+    h2 {
+        width: 100%;
     }
 }
 
@@ -42,9 +41,9 @@
     height: 350px;
     width: 350px;
     margin: auto;
-    background-color: green;
+    background-color: $color-cream;
     margin-bottom: 15px;
-    @include desktop{
+    @include desktop {
         display: flex;
         flex-direction: row;
     }
@@ -57,18 +56,18 @@
         h4 {
             text-decoration: none;
             font: 1rem $font__main;
-            color: black;
+            color: $color_black;
             text-align: center;
         }
         h4 {
             margin-top: 74px;
         }
         p {
-            border: 1px solid #000;
+            border: 1px solid $color_black;
             padding: 10px 16px;
             margin: 45px 72px;
             &:hover {
-                background-color: yellow;
+                background-color: $color-orange;
             }
         }
     }
