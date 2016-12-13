@@ -845,6 +845,8 @@ object {
     .site-footer .footer-container .fa {
       font-size: 1.5rem;
       color: midnightblue; }
+      .site-footer .footer-container .fa:hover {
+        color: #F25F38; }
   .site-footer .copyright {
     color: #b20000;
     font: 1rem "roboto" sans-serif;
