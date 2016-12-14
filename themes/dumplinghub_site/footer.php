@@ -11,7 +11,7 @@
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="footer-container">
 			<p>
-				<a href="<?php echo esc_url( 'https://github.com/dumplinghub' ); ?>">  <i class="fa fa-github" aria-hidden="true"></i></a>
+				<a href="<?php echo esc_url( 'https://github.com/dumplinghub' ); ?>">  <i class="fa fa-github-alt" aria-hidden="true"></i></a>
 			</p>
 			<p>
 				<a href="<?php echo esc_url( 'https://www.linkedin.com/in/holly-cheng-1320b4129' ); ?>"> <i class="fa fa-linkedin" aria-hidden="true"></i></a>
