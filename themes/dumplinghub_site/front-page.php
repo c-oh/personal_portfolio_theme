@@ -21,10 +21,10 @@ get_header(); ?>
     <div class="taxonomy-loop-wrapper">
       <div class="taxonomy-text-container">
         <?php $url = get_term_link($term->slug, 'project_type') ?>
-        <h4>
-          <?php echo $term->description ?> </h4>
         <h5>
           <?php echo $term->name ?> </h5>
+        <h4>
+          <?php echo $term->description ?> </h4>
         <a href="<?php echo $url ?>">
           <p> View Projects </p>
         </a>
@@ -41,12 +41,13 @@ get_header(); ?>
    $recent_posts = get_posts( $args ); // returns an array of posts ?>
         <?php foreach ( $recent_posts as $post ) : setup_postdata( $post ); ?>
         <div class="post-list-info">
-          <a href="<?php the_permalink(); ?>" title="" class='blog-picture'>
+          <a href="<?php the_permalink(); ?>" title="" class="blog-picture">
             <?php the_post_thumbnail('category-thumb');  ?> </a>
           <div class="info-area">
             <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" class='title'>
               <?php the_title();?> </a>
-            <?php the_date(); ?>
+            <a href="<?php the_permalink(); ?>" title="" class='date'>
+              <?php the_date(); ?> </a>
           </div>
         </div>
         <?php endforeach; wp_reset_postdata(); ?>

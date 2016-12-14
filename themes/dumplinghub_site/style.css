@@ -484,6 +484,31 @@ textarea {
       .taxonomy-loop-wrapper .taxonomy-text-container p:hover {
         background-color: #F25F38; }
 
+.post-list-info {
+  height: 260px; }
+  .post-list-info a {
+    overflow: hidden; }
+  .post-list-info .blog-picture {
+    position: absolute; }
+    .post-list-info .blog-picture img {
+      height: 300px; }
+  .post-list-info .info-area {
+    position: relative;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column; }
+    .post-list-info .info-area a {
+      text-decoration: none; }
+    .post-list-info .info-area .title {
+      font: 1.5rem "roboto" sans-serif;
+      font-weight: bold; }
+    .post-list-info .info-area p {
+      margin: 0; }
+
 .page-template-about {
   /* EFFECTS
 –––––––––––––––––––––––––––––––––––––––––––––––––– */

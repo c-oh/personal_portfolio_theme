@@ -7,6 +7,7 @@
     }
 }
 
+//typewriter section
 .text {
     text-align: center;
     padding: 50px 0px;
@@ -29,6 +30,7 @@
     }
 }
 
+//project section
 .taxonomy-loop {
     display: flex;
     flex-wrap: wrap;
@@ -69,6 +71,38 @@
             &:hover {
                 background-color: $color-orange;
             }
+        }
+    }
+}
+
+//journal section
+.post-list-info {
+    height: 260px;
+    a {
+        overflow: hidden;
+    }
+    .blog-picture {
+        position: absolute;
+        img {
+            height: 300px;
+        }
+    }
+    .info-area {
+        position: relative;
+        color: $color__background-body;
+        text-align: center;
+        text-transform: uppercase;
+        display: flex;
+    flex-direction: column;
+        a {
+            text-decoration: none;
+        }
+        .title {
+            font: 1.5rem $font__main;
+            font-weight: bold;
+        }
+        p {
+            margin: 0;
         }
     }
 }
