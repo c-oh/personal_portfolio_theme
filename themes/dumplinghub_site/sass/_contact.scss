@@ -1,3 +1,4 @@
+.page-id-31{
 .status-publish{
     margin:auto;
     width:90%;
@@ -5,7 +6,25 @@ header{
     text-align:center;
     color: $color-blue;
 }
+.entry-content{
+    font: 1rem $font__main;
+}
 input[type="text"], input[type="email"] {
     width: 360px;
+}
+input[type="submit"]{
+    width: 360px;
+    height: 40px;
+    background-color: $color-orange;
+    border: 2px solid $color__link-hover;
+    color: $color-grey;
+    &:hover{
+    }
+}
+
+}
+
+.widget-area{
+    display:none;
 }
 }
