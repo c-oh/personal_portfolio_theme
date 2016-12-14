@@ -865,7 +865,14 @@ object {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-pack: distribute;
-        justify-content: space-around; }
+        justify-content: space-around;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+    .site-footer .footer-container h2 {
+      color: #b20000;
+      font: 0.75rem "roboto" sans-serif;
+      font-weight: 100;
+      width: 100%; }
     .site-footer .footer-container a {
       height: 32px;
       width: 37px;
@@ -879,9 +886,20 @@ object {
           color: #F25F38;
           background-color: transparent; }
   .site-footer .copyright {
-    color: #b20000;
-    font: 1rem "roboto" sans-serif;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-pack: distribute;
-        justify-content: space-around; }
+        justify-content: space-around;
+    color: #b20000;
+    font: 0.75rem "roboto" sans-serif;
+    font-weight: 100;
+    width: 100%; }
+
+.status-publish {
+  margin: auto;
+  width: 90%; }
+  .status-publish header {
+    text-align: center;
+    color: #1E4E83; }
+  .status-publish input[type="text"], .status-publish input[type="email"] {
+    width: 360px; }

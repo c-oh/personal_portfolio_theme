@@ -5,6 +5,13 @@
         width: 200px;
         display: flex;
         justify-content: space-around;
+        flex-wrap:wrap;
+        h2{
+            color: $color_red;
+            font: 0.75rem $font__main;
+            font-weight: 100;
+            width:100%;
+        }
         a {
             height: 32px;
             width: 37px;
@@ -22,9 +29,11 @@
         }
     }
     .copyright {
-            color: $color_red;
-            font: 1rem $font__main;
             display: flex;
             justify-content: space-around;
+            color: $color_red;
+            font: 0.75rem $font__main;
+            font-weight: 100;
+            width:100%;
         }
 }

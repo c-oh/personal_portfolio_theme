@@ -10,6 +10,7 @@
 	<!-- #content -->
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="footer-container">
+			<h2> Stalk me on: </h2>
 			<p>
 				<a href="<?php echo esc_url( 'https://github.com/dumplinghub' ); ?>">  <i class="fa fa-github-alt" aria-hidden="true"></i></a>
 			</p>

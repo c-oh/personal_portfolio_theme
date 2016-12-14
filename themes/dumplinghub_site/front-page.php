@@ -36,6 +36,7 @@ get_header(); ?>
   <section class="journal">
     <h2>journal</h2>
     <div class="journal-container">
+
       <?php
    $args = array( 'numberposts' => '3', 'order' => 'DESC','post_status' => 'publish'  );
    $recent_posts = get_posts( $args ); // returns an array of posts ?>
