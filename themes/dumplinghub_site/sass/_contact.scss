@@ -4,21 +4,27 @@
     width:90%;
 header{
     text-align:center;
-    color: $color-blue;
+    color: $color__link-hover;
 }
 .entry-content{
     font: 1rem $font__main;
 }
 input[type="text"], input[type="email"] {
     width: 360px;
+    height: 40px;
+    font: 1rem $font__main;
+
 }
 input[type="submit"]{
     width: 360px;
     height: 40px;
     background-color: $color-orange;
-    border: 2px solid $color__link-hover;
+    border: none;
     color: $color-grey;
     &:hover{
+        background-color:transparent;
+        color: $color_red;
+        border: 2px solid $color__link-hover;
     }
 }
 

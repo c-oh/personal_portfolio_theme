@@ -4,28 +4,47 @@
         text-transform: uppercase;
         font: 1.5rem $font__main;
         font-weight: bold;
+        @include tablet {
+            display: none;
+        }
+    }
+}
+
+.banner-img {
+    @include tablet {
+      background-color:$color-cream;
+        img {
+            height: 100vh;
+            width: 100vw;
+        }
     }
 }
 
 //typewriter section
 .text {
-    text-align: center;
-    padding: 50px 0px;
-    color: $color_black;
-    font: 2rem $font__main;
-    font-weight: bold;
-    background-color: $color-orange;
-    h1 {
-        height: 250px;
-    }
-    span {
-        border-right: .05em solid;
-        animation: caret 1s steps(1) infinite;
+    display: none;
+    @include tablet {
+        height: 100vh;
+        display: block;
+        text-align: center;
+        padding: 50px 0px;
         color: $color_black;
-    }
-    @keyframes caret {
-        50% {
-            border-color: transparent;
+        font: 2rem $font__main;
+        font-weight: bold;
+        .typing-animation {
+            h1 {
+                height: 250px;
+            }
+            span {
+                border-right: .05em solid;
+                animation: caret 1s steps(1) infinite;
+                color: $color_black;
+            }
+            @keyframes caret {
+                50% {
+                    border-color: transparent;
+                }
+            }
         }
     }
 }
@@ -34,6 +53,9 @@
 .taxonomy-loop {
     display: flex;
     flex-wrap: wrap;
+    @include tablet {
+        display: none;
+    }
     h2 {
         width: 100%;
     }
@@ -45,9 +67,8 @@
     margin: auto;
     background-color: $color-cream;
     margin-bottom: 15px;
-    @include desktop {
-        display: flex;
-        flex-direction: row;
+    @include tablet {
+        display: none;
     }
     .taxonomy-text-container {
         height: 100%;
@@ -78,6 +99,9 @@
 //journal section
 .post-list-info {
     height: 260px;
+    @include tablet {
+        display: none;
+    }
     a {
         overflow: hidden;
     }
@@ -93,7 +117,7 @@
         text-align: center;
         text-transform: uppercase;
         display: flex;
-    flex-direction: column;
+        flex-direction: column;
         a {
             text-decoration: none;
         }

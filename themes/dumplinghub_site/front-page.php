@@ -1,14 +1,16 @@
 <?php
 /**
- * The template for displaying all pages.
- *
+ * The main template file.
+ *  <img src="<?php echo get_template_directory_uri() . '/assets/images/mobile-front-page.jpg'; ?>" class="banner" alt="Banner Image" />
  * @package dumplinghub-site_Theme
  */
 get_header(); ?>
   <!--typesection-->
+  <section class="banner-img">
   <div class="text">
     <h1 class="typing-animation"> <span id="typewrite"> </span></h1>
   </div>
+   </section>
   <!--show casing work-->
   <section class="taxonomy-loop">
     <h2> Projects </h2>

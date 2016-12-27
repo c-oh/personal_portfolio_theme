@@ -54,6 +54,10 @@ function dumplinghub_site_trim_excerpt( $text ) {
 remove_filter( 'get_the_excerpt', 'wp_trim_excerpt' );
 add_filter( 'get_the_excerpt', 'dumplinghub_site_trim_excerpt' );
 
+
+
+//for resume page 
+
 function my_styles_method() {
     
     if(!is_page_template( 'page-templates/resume.php' )){
@@ -64,6 +68,9 @@ function my_styles_method() {
     .resume-hero {
         background-image: linear-gradient( to bottom, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.4) 100% ), url( {$url});
     }";
-    wp_add_inline_style( 'dumplinghub-site--style', $custom_css );
+    wp_add_inline_style( 'dumplinghub-site-style', $custom_css );
 }
+
 add_action( 'wp_enqueue_scripts', 'my_styles_method' );
+
+
