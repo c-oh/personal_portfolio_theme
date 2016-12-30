@@ -1,7 +1,16 @@
-/* (function($) {
-  $(function() {
-    $('#toggle').click(function() {
-      $('aside').toggleClass('open');
-    });
+(function( $ ) {
+
+
+ //This will show/hide the navigation list in mobile view.
+ $('.menu-toggle').on('click', function(){
+   event.preventDefault();
+   $('#primary-menu').animate({width:'toggle'},200);
   });
-})(jQuery); */
+
+  $('.menu-toggle').on('focusout', function(){
+    event.preventDefault();
+   });
+
+
+
+})( jQuery );

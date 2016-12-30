@@ -1,4 +1,20 @@
 .page-id-31{
+
+    .entry-header{
+        display:none;
+    }
+
+    .entry-content{
+        text-align: center;
+        h1{
+            font-size: 3rem;
+            color: $color__link-hover;
+        }
+        p{
+            color: $color__border-abbr;
+            line-height: 35px;
+        }
+    }
 .status-publish{
     margin:auto;
     width:90%;

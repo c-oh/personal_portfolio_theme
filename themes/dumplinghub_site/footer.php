@@ -10,15 +10,15 @@
 	<!-- #content -->
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="footer-container">
-			<h2> Stalk me on: </h2>
+			<h2> Stalk me at: </h2>
 			<p>
-				<a href="<?php echo esc_url( 'https://github.com/dumplinghub' ); ?>">  <i class="fa fa-github-alt" aria-hidden="true"></i></a>
+				<a href="<?php echo esc_url( 'https://github.com/hollythedev' ); ?>">  <i class="fa fa-github-alt" aria-hidden="true"></i></a>
 			</p>
 			<p>
 				<a href="<?php echo esc_url( 'https://www.linkedin.com/in/holly-cheng-1320b4129' ); ?>"> <i class="fa fa-linkedin" aria-hidden="true"></i></a>
 			</p>
 			<p>
-				<a href="<?php echo esc_url( 'adfsd@afads.com' ); ?>">  <i class="fa fa-envelope" aria-hidden="true"></i> </a>
+				<a href="<?php echo esc_url( 'me@hollythedev.tech' ); ?>">  <i class="fa fa-envelope" aria-hidden="true"></i> </a>
 			</p>
 		</div>
 		<div class = "copyright">

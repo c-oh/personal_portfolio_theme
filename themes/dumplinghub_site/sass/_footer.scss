@@ -1,39 +1,42 @@
 .site-footer {
-    background-color: $color-grey;
+    background-color: $color_footer;
     .footer-container {
         margin: auto;
         width: 200px;
         display: flex;
         justify-content: space-around;
-        flex-wrap:wrap;
-        h2{
+        flex-wrap: wrap;
+        h2 {
             color: $color_red;
             font: 0.75rem $font__main;
             font-weight: 100;
-            width:100%;
-            text-align:center;
+            width: 100%;
+            text-align: center;
         }
         a {
-            height: 32px;
-            width: 37px;
-            display: block;
+            color: $color_footer;
+            height: 50px;
+            width: 50px;
+            background-color: $color-lightgrey;
+            font-size: 1.5rem;
+            border-radius: 50%;
             border: 2px solid $color-lightgrey;
+            display: block;
+            align-items: center;
+            display: flex;
+            text-align: center;
+            justify-content: center;
             i {
-                font-size: 1.5rem;
-                color: $color-lightgrey;
-                padding: 2px 5px;
-                &:hover {
-                    color: $color-orange;
-                    background-color: transparent;
-                }
+                padding: 1px 8px;
             }
+            &:hover {
+                background-color: transparent;
+                color: $color-lightgrey
+            }
+        
         }
     }
-    .copyright {
-            display: flex;
-            justify-content: space-around;
-            color: $color_red;
-            font: 0.75rem $font__main;
-            width:100%;
-        }
+    .copyright h3 {
+                text-align: center;
+            }
 }
