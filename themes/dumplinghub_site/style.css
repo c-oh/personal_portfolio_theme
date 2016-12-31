@@ -401,7 +401,7 @@ table {
         text-align: right;
         padding-top: 0; } }
     .front-content .front-image img {
-      width: 256px; }
+      width: 400px; }
   .front-content .front-button a {
     padding: 10px;
     border: 1px solid #EEC643;
@@ -592,6 +592,9 @@ a {
     color: #141414;
     background-color: #EEC643; }
 
+.resume-body .work-experience, .resume-body .soft-skills {
+  background-color: #EEC643; }
+
 @media (min-width: 600px) {
   .resume-body {
     display: -ms-flexbox;
@@ -599,7 +602,11 @@ a {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap; }
     .resume-body .work-experience, .resume-body .skills, .resume-body .soft-skills, .resume-body .education {
-      width: 50%; } }
+      width: 50%; }
+    .resume-body .education {
+      background-color: #EEC643; }
+    .resume-body .soft-skills {
+      background-color: white; } }
 
 /*--------------------------------------------------------------
 # Widgets

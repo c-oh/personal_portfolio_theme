@@ -5,11 +5,22 @@
     }
 }
 .resume-body{
+    .work-experience, .soft-skills
+    {
+        background-color: $color-cream;
+    }
     @include tablet{
         display: flex;
         flex-wrap:wrap;
         .work-experience, .skills, .soft-skills, .education{
         width:50%;
+        }
+        .education{
+            background-color: $color-cream;
+        }
+        .soft-skills{
+            background-color: white;
+        }
     }
     }
-}
+     
