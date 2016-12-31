@@ -598,7 +598,34 @@ a {
 
 .resume-body {
   margin-top: 45px; }
-  .resume-body .skills, .resume-body .education {
+  .resume-body .skills,
+  .resume-body .education,
+  .resume-body .soft-skills,
+  .resume-body .work-experience {
+    display: -ms-flexbox;
+    display: flex; }
+    .resume-body .skills img,
+    .resume-body .education img,
+    .resume-body .soft-skills img,
+    .resume-body .work-experience img {
+      height: 60px;
+      width: 60px;
+      margin-right: 10px; }
+    .resume-body .skills h1,
+    .resume-body .education h1,
+    .resume-body .soft-skills h1,
+    .resume-body .work-experience h1 {
+      font: 1.5rem "roboto" sans-serif;
+      font-weight: 300; }
+    .resume-body .skills p,
+    .resume-body .education p,
+    .resume-body .soft-skills p,
+    .resume-body .work-experience p {
+      font: 1rem "roboto" sans-serif;
+      color: #383F49;
+      line-height: 30px; }
+  .resume-body .skills,
+  .resume-body .education {
     background-color: #EEC643; }
   @media (min-width: 600px) {
     .resume-body {
@@ -606,7 +633,10 @@ a {
       display: flex;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap; }
-      .resume-body .work-experience, .resume-body .skills, .resume-body .soft-skills, .resume-body .education {
+      .resume-body .work-experience,
+      .resume-body .skills,
+      .resume-body .soft-skills,
+      .resume-body .education {
         width: 50%; }
       .resume-body .work-experience {
         background-color: #EEC643; }

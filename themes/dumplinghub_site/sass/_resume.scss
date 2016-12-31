@@ -1,32 +1,55 @@
-.resume-top{
+.resume-top {
     text-align: center;
     text-transform: uppercase;
-    h1{
+    h1 {
         font: 2.5rem $font__main;
         font-weight: 100;
     }
-    button{
+    button {
         @include buttons
     }
 }
-.resume-body{
-        margin-top: 45px;
-    .skills, .education
-    {
+
+.resume-body {
+    margin-top: 45px;
+    .skills,
+    .education,
+    .soft-skills,
+    .work-experience {
+        display: flex;
+        img {
+            height: 60px;
+            width: 60px;
+            margin-right: 10px;
+        }
+        h1{
+            font: 1.5rem $font__main;
+            font-weight: 300;
+        }
+        p{
+            font: 1rem $font__main;
+            color: $color_footer;
+            line-height: 30px;
+        }
+    }
+    .skills,
+    .education {
         background-color: $color-cream;
     }
-    @include tablet{
+    @include tablet {
         display: flex;
-        flex-wrap:wrap;
-        .work-experience, .skills, .soft-skills, .education{
-        width:50%;
+        flex-wrap: wrap;
+        .work-experience,
+        .skills,
+        .soft-skills,
+        .education {
+            width: 50%;
         }
-        .work-experience{
+        .work-experience {
             background-color: $color-cream;
         }
-        .skills{
+        .skills {
             background-color: white;
         }
     }
-    }
-     
+}
