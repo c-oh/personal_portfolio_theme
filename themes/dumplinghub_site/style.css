@@ -349,6 +349,46 @@ table {
   margin: 0 0 1.5em;
   width: 100%; }
 
+.site-content {
+  width: 100%; }
+
+.front-content {
+  margin: auto;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  text-align: center; }
+  @media (min-width: 600px) {
+    .front-content {
+      text-align: left; } }
+  .front-content .title {
+    text-transform: uppercase; }
+    .front-content .title .small {
+      letter-spacing: 4px;
+      color: #383F49; }
+    .front-content .title .large {
+      font: 2rem "roboto" sans-serif;
+      font-weight: 300; }
+  .front-content h2 {
+    display: none; }
+
+.front-description p {
+  color: #383F49; }
+  @media (min-width: 600px) {
+    .front-description p {
+      width: 400px;
+      font: 1.3rem "roboto" sans-serif; } }
+
+.front-image {
+  -ms-flex-order: -1;
+      order: -1; }
+  @media (min-width: 600px) {
+    .front-image {
+      -ms-flex-order: 0;
+          order: 0;
+      text-align: right; } }
+
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/

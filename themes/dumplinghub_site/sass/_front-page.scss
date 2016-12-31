@@ -1,0 +1,43 @@
+.site-content {
+    width: 100%;
+}
+
+.front-content {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    @include tablet {
+        text-align: left;
+    }
+    .title {
+        text-transform: uppercase;
+        .small {
+            letter-spacing: 4px;
+            color: $color_footer;
+        }
+        .large {
+            font: 2rem $font__main;
+            font-weight: 300;
+        }
+    }
+    h2{
+        display:none;
+    }
+}
+
+.front-description p {
+    color: $color_footer;
+    @include tablet {
+        width: 400px;
+        font: 1.3rem $font__main;
+    }
+}
+
+.front-image {
+    order: -1;
+    @include tablet {
+        order: 0;
+        text-align: right;
+    }
+}

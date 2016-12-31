@@ -56,21 +56,17 @@ add_filter( 'get_the_excerpt', 'dumplinghub_site_trim_excerpt' );
 
 
 
-//for resume page 
 
-function my_styles_method() {
-    
-    if(!is_page_template( 'page-templates/resume.php' )){
-        return;
-    }
-    $url = CFS()->get('background_image');
-    $custom_css = "
-    .resume-hero {
-        background-image: linear-gradient( to bottom, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.4) 100% ), url( {$url});
-    }";
-    wp_add_inline_style( 'dumplinghub-site-style', $custom_css );
+//Custom front page image
+
+function my_background_method() {
+
+	if(!is_page_template( 'front-page.php' )){
+		return;
+	}
+
+	$url = CFS()->get( 'front_page_photo' );//This is grabbing the background image via Custom Field Suite Plugi;
+	wp_add_inline_style( 'dumplinghub-site-style' );
 }
 
-add_action( 'wp_enqueue_scripts', 'my_styles_method' );
-
-
+add_action( 'wp_enqueue_scripts', 'my_background_method' );
