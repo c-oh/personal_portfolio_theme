@@ -32,11 +32,12 @@ input[type="text"], input[type="email"] {
 
 }
 input[type="submit"]{
-    width: 360px;
-    height: 40px;
-    background-color: $color-orange;
+    width: 250px;
+    height: 50px;
+    background-color: $color-cream;
     border: none;
-    color: $color-grey;
+    color: $color-lightgrey;
+    border-radius:13%;
     &:hover{
         background-color:transparent;
         color: $color_red;
@@ -49,4 +50,25 @@ input[type="submit"]{
 .widget-area{
     display:none;
 }
+
+.wpcf7-form{
+    display:flex;
+    flex-wrap: wrap;
 }
+}
+
+.wpcf7 .wpcf7-text,
+.wpcf7 .wpcf7-textarea{
+  text-indent: 30px;
+}
+.wpcf7 p{ position: relative; }
+.wpcf7 p .fa{
+  position: absolute;
+  color: #cdcac3;
+  z-index: 100;
+  font-size: 18px;
+  top: 22%;
+  left: 3%;
+}
+.wpcf7 p .fa-pencil{ 
+    top: 4%; }

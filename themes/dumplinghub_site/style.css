@@ -750,11 +750,12 @@ object {
     height: 40px;
     font: 1rem "roboto" sans-serif; }
   .page-id-31 .status-publish input[type="submit"] {
-    width: 360px;
-    height: 40px;
-    background-color: #F25F38;
+    width: 250px;
+    height: 50px;
+    background-color: #EEC643;
     border: none;
-    color: #141414; }
+    color: #FBFEFB;
+    border-radius: 13%; }
     .page-id-31 .status-publish input[type="submit"]:hover {
       background-color: transparent;
       color: #B80C09;
@@ -762,3 +763,27 @@ object {
 
 .page-id-31 .widget-area {
   display: none; }
+
+.page-id-31 .wpcf7-form {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+
+.wpcf7 .wpcf7-text,
+.wpcf7 .wpcf7-textarea {
+  text-indent: 30px; }
+
+.wpcf7 p {
+  position: relative; }
+
+.wpcf7 p .fa {
+  position: absolute;
+  color: #cdcac3;
+  z-index: 100;
+  font-size: 18px;
+  top: 22%;
+  left: 3%; }
+
+.wpcf7 p .fa-pencil {
+  top: 4%; }
