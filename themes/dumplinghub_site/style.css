@@ -351,7 +351,7 @@ table {
 
 .front-content {
   margin: auto;
-  width: 100%;
+  width: 90vw;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
@@ -360,16 +360,14 @@ table {
   @media (min-width: 600px) {
     .front-content {
       text-align: left;
-      width: 85%; } }
+      width: 90vw; } }
   .front-content .title {
     text-transform: uppercase; }
-    @media (min-width: 600px) {
-      .front-content .title {
-        padding-top: 37px; } }
     .front-content .title .small {
       letter-spacing: 4px;
       color: #383F49;
-      margin: 0; }
+      margin: 0;
+      padding: 17px 0; }
     .front-content .title .large {
       font: 2rem "roboto" sans-serif;
       font-weight: 300;
@@ -387,17 +385,14 @@ table {
   .front-content h2 {
     display: none; }
 
-.front-description {
-  width: 100vw;
-  margin: auto; }
-  .front-description p {
-    color: #383F49;
-    padding: none;
-    font: 1rem "roboto" sans-serif; }
-    @media (min-width: 600px) {
-      .front-description p {
-        width: 300px;
-        line-height: 30px; } }
+.front-description p {
+  color: #383F49;
+  padding: 0;
+  font: 1rem "roboto" sans-serif;
+  line-height: 30px; }
+  @media (min-width: 600px) {
+    .front-description p {
+      width: 300px; } }
 
 .front-image {
   -ms-flex-order: -1;
