@@ -1,9 +1,15 @@
-
-.resume-hero{
-    height: 50vh;
-    background-size: cover;
-    h6{
+.resume-top{
     text-align: center;
-    font: 1.5rem $font__main;
+    button{
+        @include buttons
+    }
 }
+.resume-body{
+    @include tablet{
+        display: flex;
+        flex-wrap:wrap;
+        .work-experience, .skills, .soft-skills, .education{
+        width:50%;
+    }
+    }
 }

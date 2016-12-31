@@ -23,3 +23,11 @@
 	}
 }
 
+
+@mixin buttons {
+	padding: 10px;
+    border: 1px solid $color-cream;
+    border-radius: 10%;
+    color: $color-grey;
+    background-color: $color-cream;
+}

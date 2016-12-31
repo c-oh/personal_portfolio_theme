@@ -625,12 +625,23 @@ a {
   content: "";
   display: table; }
 
-.resume-hero {
-  height: 50vh;
-  background-size: cover; }
-  .resume-hero h6 {
-    text-align: center;
-    font: 1.5rem "roboto" sans-serif; }
+.resume-top {
+  text-align: center; }
+  .resume-top button {
+    padding: 10px;
+    border: 1px solid #EEC643;
+    border-radius: 10%;
+    color: #141414;
+    background-color: #EEC643; }
+
+@media (min-width: 600px) {
+  .resume-body {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+    .resume-body .work-experience, .resume-body .skills, .resume-body .soft-skills, .resume-body .education {
+      width: 50%; } }
 
 /*--------------------------------------------------------------
 # Widgets
@@ -747,46 +758,45 @@ object {
 .gallery-caption {
   display: block; }
 
-.site-footer {
-  background-color: #383F49; }
-  .site-footer .footer-container {
-    margin: auto;
-    width: 200px;
+.site-footer .footer-container {
+  margin: auto;
+  width: 200px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+  .site-footer .footer-container h2 {
+    color: #EEC643;
+    width: 100%;
+    text-align: center;
+    font: 1rem "roboto" sans-serif;
+    font-weight: 100; }
+  .site-footer .footer-container a {
+    color: #FBFEFB;
+    height: 50px;
+    width: 50px;
+    background-color: #666;
+    font-size: 1.5rem;
+    border-radius: 50%;
+    border: 2px solid #666;
+    display: block;
+    -ms-flex-align: center;
+        align-items: center;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap; }
-    .site-footer .footer-container h2 {
-      color: #B80C09;
-      font: 0.75rem "roboto" sans-serif;
-      font-weight: 100;
-      width: 100%;
-      text-align: center; }
-    .site-footer .footer-container a {
-      color: #383F49;
-      height: 50px;
-      width: 50px;
-      background-color: #FBFEFB;
-      font-size: 1.5rem;
-      border-radius: 50%;
-      border: 2px solid #FBFEFB;
-      display: block;
-      -ms-flex-align: center;
-          align-items: center;
-      display: -ms-flexbox;
-      display: flex;
-      text-align: center;
-      -ms-flex-pack: center;
-          justify-content: center; }
-      .site-footer .footer-container a i {
-        padding: 1px 8px; }
-      .site-footer .footer-container a:hover {
-        background-color: transparent;
-        color: #FBFEFB; }
-  .site-footer .copyright h3 {
-    text-align: center; }
+    text-align: center;
+    -ms-flex-pack: center;
+        justify-content: center; }
+    .site-footer .footer-container a i {
+      padding: 1px 8px; }
+    .site-footer .footer-container a:hover {
+      color: #666; }
+
+.site-footer .copyright h3 {
+  text-align: center;
+  font: 1rem "roboto" sans-serif; }
 
 .page-id-31 .entry-header {
   display: none; }
@@ -795,39 +805,35 @@ object {
   text-align: center; }
   .page-id-31 .entry-content h1 {
     font-size: 3rem;
-    color: midnightblue; }
+    color: midnightblue;
+    text-align: center; }
   .page-id-31 .entry-content p {
     color: #666;
     line-height: 35px; }
 
-.page-id-31 .status-publish {
-  margin: auto;
-  width: 90%; }
-  .page-id-31 .status-publish header {
-    text-align: center;
-    color: midnightblue; }
-  .page-id-31 .status-publish .entry-content {
-    font: 1rem "roboto" sans-serif; }
-  .page-id-31 .status-publish input[type="text"], .page-id-31 .status-publish input[type="email"] {
-    width: 360px;
-    height: 40px;
-    font: 1rem "roboto" sans-serif; }
-  .page-id-31 .status-publish input[type="submit"] {
-    width: 250px;
-    height: 50px;
-    background-color: #EEC643;
-    border: none;
-    color: #FBFEFB;
-    border-radius: 13%; }
-    .page-id-31 .status-publish input[type="submit"]:hover {
-      background-color: transparent;
-      color: #B80C09;
-      border: 2px solid midnightblue; }
+.page-id-31 .entry-content {
+  font: 1rem "roboto" sans-serif; }
 
-.page-id-31 .widget-area {
+.page-id-31 [type="text"], .page-id-31 input[type="email"] {
+  width: 100%;
+  height: 40px;
+  font: 1rem "roboto" sans-serif; }
+
+.page-id-31 input[type="submit"] {
+  padding: 10px;
+  border: 1px solid #EEC643;
+  border-radius: 10%;
+  color: #141414;
+  background-color: #EEC643; }
+  .page-id-31 input[type="submit"]:hover {
+    background-color: transparent;
+    color: #B80C09;
+    border: 2px solid midnightblue; }
+
+.widget-area {
   display: none; }
 
-.page-id-31 .wpcf7-form {
+.wpcf7-form {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;

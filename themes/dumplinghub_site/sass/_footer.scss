@@ -1,26 +1,27 @@
 .site-footer {
-    background-color: $color_footer;
+   
     .footer-container {
+        
         margin: auto;
         width: 200px;
         display: flex;
         justify-content: space-around;
         flex-wrap: wrap;
         h2 {
-            color: $color_red;
-            font: 0.75rem $font__main;
-            font-weight: 100;
+            color: $color_cream;
             width: 100%;
             text-align: center;
+             font: 1rem $font__main;
+     font-weight: 100;
         }
         a {
-            color: $color_footer;
+            color: $color_lightgrey;
             height: 50px;
             width: 50px;
-            background-color: $color-lightgrey;
+            background-color: $color__border-abbr;
             font-size: 1.5rem;
             border-radius: 50%;
-            border: 2px solid $color-lightgrey;
+            border: 2px solid $color__border-abbr;
             display: block;
             align-items: center;
             display: flex;
@@ -30,13 +31,13 @@
                 padding: 1px 8px;
             }
             &:hover {
-                background-color: transparent;
-                color: $color-lightgrey
+            color: $color__border-abbr;
             }
         
         }
     }
     .copyright h3 {
                 text-align: center;
+font: 1rem $font__main;
             }
 }
