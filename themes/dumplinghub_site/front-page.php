@@ -17,6 +17,9 @@ get_header(); ?>
         <?php echo CFS()->get( 'description'); ?>
       </p>
     </div>
+    <div class= "front-button">
+      <a href="#" class="button">Learn More</a>
+      </div>
     <div class="front-image">
       <h2> image of electronic devices </h2>
     </div>

@@ -1,18 +1,17 @@
-.site-content {
-    width: 100%;
-}
 
 .front-content {
     margin: auto;
+    width: 100%;
     display: flex;
     flex-direction: column;
     text-align: center;
     @include tablet {
         text-align: left;
+        width: 85%;
     }
     .title {
         text-transform: uppercase;
-        @include desktop{
+        @include tablet{
                 padding-top: 37px;
         }
         .small {
@@ -25,7 +24,10 @@
             font-weight: 300;
             margin: 0;
             @include tablet{
-                 font: 5rem $font__main;
+                font-size:5rem;
+            }
+            @include desktop{
+                font: 7rem $font__main;
             }
             span:before {
             @include tablet{
@@ -46,10 +48,12 @@
 p {
     color: $color_footer;
     padding:none;
+    font: 1rem $font__main;
     @include tablet {
-        width: 400px;
-        font: 1.3rem $font__main;
+        width: 300px;
+            line-height: 30px;
     }
+
 }
 }
 
@@ -59,4 +63,12 @@ p {
         order: 0;
         text-align: right;
     }
+}
+
+.front-button a{
+    padding: 10px;
+    border: 1px solid $color-cream;
+    border-radius: 10%;
+    color: $color-grey;
+    background-color: $color-cream;
 }
