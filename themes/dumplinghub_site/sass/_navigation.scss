@@ -99,6 +99,9 @@ img{
 					}
 				}
 			}
+			.menu-item-41{
+				border: 1px solid black;
+			}
 		}
 		li {
 			padding: 10px 20px;
@@ -112,19 +115,8 @@ img{
 				padding: 0;
 			}
 		}
-		.riipen-brand {
-			@include tablet {
-				order: 1;
-			}
-		}
-		.menu-item-has-children {
-			padding: 0 20px;
-			font-size: 0;
-			@include tablet {
-				padding: 0;
-				font-size: 1em;
-			}
-		}
+		
+		
 		ul {
 			display: block;
 			top: inherit;
@@ -136,10 +128,6 @@ img{
 				top: 100%;
 				display: none;
 				z-index: 99999;
-			}
-			ul {
-				left: -999em;
-				top: 0;
 			}
 			li {
 				font-size: 1em;
