@@ -498,6 +498,10 @@ a {
       .main-navigation ul .menu-item-41 {
         border: 1px solid black; } }
 
+.main-navigation li.current-menu-item a {
+  text-decoration: underline;
+  background: yellow; }
+
 /* Small menu. */
 .menu-toggle,
 .main-navigation.toggled ul {

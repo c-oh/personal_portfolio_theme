@@ -100,8 +100,13 @@ img{
 			}
 		}	
 	}	
-			
+	li.current-menu-item a {
+text-decoration: underline;
+background:yellow;
+}		
 }
+
+
 
 
 /* Small menu. */
