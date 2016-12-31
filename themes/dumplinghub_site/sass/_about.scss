@@ -1,0 +1,16 @@
+.about-content{
+display:flex;
+
+.column{
+    color: $color_footer;
+    line-height: 40px;
+    font: 1rem $font__main;
+    font-weight: 100;
+}
+
+.about-picture {
+h1{
+    display:none;
+}
+}
+}
