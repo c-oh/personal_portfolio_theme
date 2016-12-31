@@ -1,6 +1,6 @@
 
+
 .front-content {
-    height: 100vh;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -9,7 +9,6 @@
     }
     .title {
         text-transform: uppercase;
-    
         .small {
             letter-spacing: 4px;
             color: $color_footer;
@@ -20,47 +19,46 @@
             font: 2rem $font__main;
             font-weight: 300;
             margin: 0;
-            @include tablet{
-                font-size:5rem;
+            @include tablet {
+                font-size: 4rem;
             }
-            @include desktop{
-                font: 7rem $font__main;
+            @include desktop {
+                font-size: 4rem;
             }
             span:before {
-            @include tablet{
-                content: '\a';
-                white-space: pre;
-                            }
-        }
+                @include tablet {
+                    content: '\a';
+                    white-space: pre;
+                }
+            }
         }
     }
-    h2{
-        display:none;
-    }
-}
-
-.front-description p {
-    color: $color_footer;
-    padding:0;
-    font: 1rem $font__main;
+    .front-description p {
+        color: $color_footer;
+        padding: 0;
+        font: 1rem $font__main;
         line-height: 30px;
-            font-weight: 100;
-    @include tablet {
-        width: 300px;
-            
+        font-weight: 100;
+        @include tablet {
+            width: 300px;
+        }
     }
-
-}
-
-
-.front-image {
-    order: -1;
-    @include tablet {
-        order: 0;
-        text-align: right;
+    h2 {
+        display: none;
     }
-}
-
-.front-button a{
-   @include buttons;
+    .front-image {
+        order: -1;
+        padding-top: 24px;
+        @include tablet {
+            order: 0;
+            text-align: right;
+            padding-top: 0;
+        }
+        img {
+            width: 256px;
+        }
+    }
+    .front-button a {
+        @include buttons;
+    }
 }

@@ -31,15 +31,11 @@ a {
 /* Menus */
 
 .site-header {
-	background: $color-lightgrey;
-	z-index: 2;
+	width: 90%;
+	margin:auto;
 	height: 68px;
-	width: 100%;
-	box-shadow: 0 0 8px rgba(0, 0, 0, .7);
 	.container {
 		height: 100%;
-
-		padding: 0 1rem;
 		display: flex;
 		justify-content: space-between;
 		position: relative;
@@ -67,7 +63,7 @@ img{
 		}
 	}
 	ul {
-		overflow: auto;
+		
 		font-size: 1rem;
 		text-transform: uppercase;
 		display: none;
@@ -102,62 +98,9 @@ img{
 			.menu-item-41{
 				border: 1px solid black;
 			}
-		}
-		li {
-			padding: 10px 20px;
-			white-space: nowrap;
-			&:hover>a,
-			&.focus>a {}
-			@include tablet {
-				position: relative;
-				background-color: transparent;
-				margin: 0;
-				padding: 0;
-			}
-		}
-		
-		
-		ul {
-			display: block;
-			top: inherit;
-			position: inherit;
-			height: auto;
-			@include tablet {
-				padding: 0;
-				position: absolute;
-				top: 100%;
-				display: none;
-				z-index: 99999;
-			}
-			li {
-				font-size: 1em;
-				margin: 0;
-				padding: 10px 0;
-				display: block;
-				&:hover>ul,
-				&.focus>ul {
-					margin-left: auto;
-					margin-right: auto;
-					left: 100%;
-					right: 100%;
-				}
-				@include tablet {
-					padding: 0;
-				}
-			}
-			:hover>a,
-			.focus>a {}
-			a:hover,
-			a.focus {}
-		}
-		li:hover>ul,
-		li.focus>ul {
-			display: block;
-		}
-	}
-	.current_page_item>a,
-	.current-menu-item>a,
-	.current_page_ancestor>a {}
+		}	
+	}	
+			
 }
 
 
@@ -172,7 +115,6 @@ img{
 	.menu-toggle {
 		display: none;
 	}
-	.main-navigation ul {}
 }
 
 .comment-navigation,
