@@ -22,6 +22,7 @@ get_header(); ?>
       </div>
     <div class="front-image">
       <h2> image of electronic devices </h2>
+      <img src="<?php echo get_template_directory_uri() . '/assets/images/front.jpg'; ?>" class="frontpic" alt="Picture of electronic devices" />
     </div>
   </section>
   <!--footer-->
