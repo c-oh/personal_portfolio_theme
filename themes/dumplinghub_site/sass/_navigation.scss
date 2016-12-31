@@ -1,4 +1,3 @@
-
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
@@ -32,7 +31,7 @@ a {
 
 .site-header {
 	width: 90%;
-	margin:auto;
+	margin: auto;
 	height: 68px;
 	.container {
 		height: 100%;
@@ -40,20 +39,18 @@ a {
 		justify-content: space-between;
 		position: relative;
 	}
-
 }
 
 .site-branding {
 	height: 1.5em;
 	width: 5em;
-
-img{
-	    height: 49px;
-    max-width: 100%;
-		@include tablet{
+	img {
+		height: 49px;
+		max-width: 100%;
+		@include tablet {
 			height: 59px;
 		}
-}
+	}
 }
 
 .main-navigation {
@@ -63,7 +60,6 @@ img{
 		}
 	}
 	ul {
-		
 		font-size: 1rem;
 		text-transform: uppercase;
 		display: none;
@@ -95,18 +91,18 @@ img{
 					}
 				}
 			}
-			.menu-item-41{
+			.menu-item-41 {
 				border: 1px solid black;
 			}
-		}	
-	}	
+		}
+	}
 	li.current-menu-item a {
-text-decoration: underline;
-background:yellow;
-}		
+		background: $color_footer;
+		color: $color-lightgrey;
+
+		
+	}
 }
-
-
 
 
 /* Small menu. */
@@ -139,4 +135,3 @@ background:yellow;
 		width: 50%;
 	}
 }
-

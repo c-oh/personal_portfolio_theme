@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying archive project type pages.
+ * The template for displaying archive project pages.
  *
  * @package dumplinghub_site_Theme
  */
@@ -10,7 +10,6 @@ get_header(); ?>
 			<?php if ( have_posts() ) : ?>
 			<header class="page-header">
 				<?php
-					the_archive_title( '<h1 class="page-title">', '</h1>' );
 					the_archive_description( '<div class="taxonomy-description">', '</div>' );
 				?>
 			</header>
