@@ -584,7 +584,11 @@ a {
   display: table; }
 
 .resume-top {
-  text-align: center; }
+  text-align: center;
+  text-transform: uppercase; }
+  .resume-top h1 {
+    font: 2.5rem "roboto" sans-serif;
+    font-weight: 100; }
   .resume-top button {
     padding: 10px;
     border: 1px solid #EEC643;
@@ -592,21 +596,22 @@ a {
     color: #141414;
     background-color: #EEC643; }
 
-.resume-body .work-experience, .resume-body .soft-skills {
-  background-color: #EEC643; }
-
-@media (min-width: 600px) {
-  .resume-body {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap; }
-    .resume-body .work-experience, .resume-body .skills, .resume-body .soft-skills, .resume-body .education {
-      width: 50%; }
-    .resume-body .education {
-      background-color: #EEC643; }
-    .resume-body .soft-skills {
-      background-color: white; } }
+.resume-body {
+  margin-top: 45px; }
+  .resume-body .skills, .resume-body .education {
+    background-color: #EEC643; }
+  @media (min-width: 600px) {
+    .resume-body {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; }
+      .resume-body .work-experience, .resume-body .skills, .resume-body .soft-skills, .resume-body .education {
+        width: 50%; }
+      .resume-body .work-experience {
+        background-color: #EEC643; }
+      .resume-body .skills {
+        background-color: white; } }
 
 /*--------------------------------------------------------------
 # Widgets

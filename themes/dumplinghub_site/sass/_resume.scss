@@ -1,11 +1,17 @@
 .resume-top{
     text-align: center;
+    text-transform: uppercase;
+    h1{
+        font: 2.5rem $font__main;
+        font-weight: 100;
+    }
     button{
         @include buttons
     }
 }
 .resume-body{
-    .work-experience, .soft-skills
+        margin-top: 45px;
+    .skills, .education
     {
         background-color: $color-cream;
     }
@@ -15,10 +21,10 @@
         .work-experience, .skills, .soft-skills, .education{
         width:50%;
         }
-        .education{
+        .work-experience{
             background-color: $color-cream;
         }
-        .soft-skills{
+        .skills{
             background-color: white;
         }
     }
