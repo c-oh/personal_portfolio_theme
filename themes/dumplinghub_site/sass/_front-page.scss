@@ -12,13 +12,27 @@
     }
     .title {
         text-transform: uppercase;
+        @include desktop{
+                padding-top: 37px;
+        }
         .small {
             letter-spacing: 4px;
             color: $color_footer;
+            margin: 0;
         }
         .large {
             font: 2rem $font__main;
             font-weight: 300;
+            margin: 0;
+            @include tablet{
+                 font: 5rem $font__main;
+            }
+            span:before {
+            @include tablet{
+                content: '\a';
+                white-space: pre;
+                            }
+        }
         }
     }
     h2{
@@ -26,12 +40,17 @@
     }
 }
 
-.front-description p {
+.front-description {
+    width:100vw;
+    margin:auto;
+p {
     color: $color_footer;
+    padding:none;
     @include tablet {
         width: 400px;
         font: 1.3rem $font__main;
     }
+}
 }
 
 .front-image {
