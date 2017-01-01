@@ -1,5 +1,14 @@
 .sp-container{
+    @include tablet{
 display:flex;
+justify-content:space-between;
+.sp-thumbnail{
+    width: 45%
+}
+.sp-info{
+    width: 50%;
+}
+}
 }
 	.tabbing-wrapper {
 		width: 100%;
@@ -12,19 +21,17 @@ display:flex;
 		text-align: center;
 		box-sizing: border-box;
 		border-radius: 10px;
-		background: pink;
+
 		.leftsection {
 			border-bottom-left-radius: 10px;
 			border-top-left-radius: 10px;
-			background: pink;
+
 		}
 	
 		.active {
-			color: pink;
+			
 			margin: auto;
-			&:hover {
-				color: yellow;
-			}
+			
 		}
 		a {
 			display: flex;
@@ -39,9 +46,7 @@ display:flex;
 			padding-left: 8px;
 		}
 	}
-	.site-content {
-		background: $color__background-body;
-	}
+	
 	.entry-header {
 		display: flex;
 		flex-wrap: wrap;
@@ -69,8 +74,7 @@ display:flex;
 	}
 	/*----- Tabs -----*/
 	.tabs {
-		width: 95%;
-		margin: 0 auto;
+
 		padding-bottom: 50px;
 		@include desktop {
 			padding-bottom: 0;
@@ -84,6 +88,7 @@ display:flex;
 	/* Clearfix */
 	.tab-links {
 		margin: 0;
+        padding: 0;
 		&:after {
 			display: block;
 			clear: both;
@@ -92,52 +97,48 @@ display:flex;
 		li {
 			position: relative;
 			top: 1px;
-			
-			margin: 0px 1px;
+
 			height: 100%;
 			float: left;
 			list-style: none;
 			@include desktop {
 				width: 15%;
 			}
-                border-bottom: 1px solid grey;
+                border-bottom: 1px solid $color_footer;
 		}
 		a {
 			height: 100%;
 			min-height: 25px;
 			width: 100%;
-			text-align: center;
 			display: inline-block;
-			font: 1rem $font__main;
-            font-weight: 400;
-			transition: all linear 0.15s;
+			font: 0.8rem $font__main;
+            font-weight: 100;
+            letter-spacing: 1px;
+            padding-bottom: 20px;
+            text-transform: uppercase;
 		}
 		a:hover {
-			outline: none;
-
 			text-decoration: none;
+            color:black;
 		}
 	}
 	li.active a,
 	li.active a:hover {
-		border-bottom: 1.5px solid $color_red;
+		border-bottom: 3px solid $color_red;
+color: black;
 
 
-		outline: none;
 
 	}
 	/*----- Content of Tabs -----*/
-	.tab-content {
-		padding: 15px;
-		border-radius: 7px;
-		border-top-left-radius: 2px;
-		border: 1px solid $color__background-body;
-
-	}
 	.tab {
 		padding-bottom: 40px;
 		display: none;
 	}
+    .tab-content{
+            padding-top: 20px;
+
+    }
 	.tab.active {
 		display: block;
 	}

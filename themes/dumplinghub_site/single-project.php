@@ -45,9 +45,9 @@ get_header(); ?>
 									<?php echo $tab_three_name ?>
 								</a>
 							</li>
-							<li>
+							
 								<?php endif ?>
-							</li>
+					
 						</ul>
 						<div class="tab-content">
 							<div id="tab1" class="tab active">

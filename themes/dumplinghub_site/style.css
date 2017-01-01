@@ -601,9 +601,16 @@ a {
     background-color: #EEC643;
     width: 104px; }
 
-.sp-container {
-  display: -ms-flexbox;
-  display: flex; }
+@media (min-width: 600px) {
+  .sp-container {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+        justify-content: space-between; }
+    .sp-container .sp-thumbnail {
+      width: 45%; }
+    .sp-container .sp-info {
+      width: 50%; } }
 
 .tabbing-wrapper {
   width: 100%;
@@ -617,17 +624,12 @@ a {
   display: inline-flex;
   text-align: center;
   box-sizing: border-box;
-  border-radius: 10px;
-  background: pink; }
+  border-radius: 10px; }
   .tabbing-section .leftsection {
     border-bottom-left-radius: 10px;
-    border-top-left-radius: 10px;
-    background: pink; }
+    border-top-left-radius: 10px; }
   .tabbing-section .active {
-    color: pink;
     margin: auto; }
-    .tabbing-section .active:hover {
-      color: yellow; }
   .tabbing-section a {
     display: -ms-flexbox;
     display: flex;
@@ -639,9 +641,6 @@ a {
     padding-right: 10px; }
   .tabbing-section a:last-child {
     padding-left: 8px; }
-
-.site-content {
-  background: #fff; }
 
 .entry-header {
   display: -ms-flexbox;
@@ -670,8 +669,6 @@ a {
 
 /*----- Tabs -----*/
 .tabs {
-  width: 95%;
-  margin: 0 auto;
   padding-bottom: 50px; }
   @media (min-width: 1000px) {
     .tabs {
@@ -683,7 +680,8 @@ a {
 /*----- Tab Links -----*/
 /* Clearfix */
 .tab-links {
-  margin: 0; }
+  margin: 0;
+  padding: 0; }
   .tab-links:after {
     display: block;
     clear: both;
@@ -691,11 +689,10 @@ a {
   .tab-links li {
     position: relative;
     top: 1px;
-    margin: 0px 1px;
     height: 100%;
     float: left;
     list-style: none;
-    border-bottom: 1px solid grey; }
+    border-bottom: 1px solid #383F49; }
     @media (min-width: 1000px) {
       .tab-links li {
         width: 15%; } }
@@ -703,30 +700,28 @@ a {
     height: 100%;
     min-height: 25px;
     width: 100%;
-    text-align: center;
     display: inline-block;
-    font: 1rem "roboto" sans-serif;
-    font-weight: 400;
-    transition: all linear 0.15s; }
+    font: 0.8rem "roboto" sans-serif;
+    font-weight: 100;
+    letter-spacing: 1px;
+    padding-bottom: 20px;
+    text-transform: uppercase; }
   .tab-links a:hover {
-    outline: none;
-    text-decoration: none; }
+    text-decoration: none;
+    color: black; }
 
 li.active a,
 li.active a:hover {
-  border-bottom: 1.5px solid #B80C09;
-  outline: none; }
+  border-bottom: 3px solid #B80C09;
+  color: black; }
 
 /*----- Content of Tabs -----*/
-.tab-content {
-  padding: 15px;
-  border-radius: 7px;
-  border-top-left-radius: 2px;
-  border: 1px solid #fff; }
-
 .tab {
   padding-bottom: 40px;
   display: none; }
+
+.tab-content {
+  padding-top: 20px; }
 
 .tab.active {
   display: block; }
