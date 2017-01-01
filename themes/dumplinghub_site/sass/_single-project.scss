@@ -1,4 +1,6 @@
-
+.sp-container{
+display:flex;
+}
 	.tabbing-wrapper {
 		width: 100%;
 		display: flex;
@@ -8,7 +10,6 @@
 		margin: 0px auto;
 		display: inline-flex;
 		text-align: center;
-		border: 1.5px green solid;
 		box-sizing: border-box;
 		border-radius: 10px;
 		background: pink;
@@ -17,13 +18,7 @@
 			border-top-left-radius: 10px;
 			background: pink;
 		}
-		.rightsection {
-			background: green;
-			border-radius: 9px;
-		}
-		.inactive {
-			color: green;
-		}
+	
 		.active {
 			color: pink;
 			margin: auto;
@@ -45,7 +40,7 @@
 		}
 	}
 	.site-content {
-		background: grey;
+		background: $color__background-body;
 	}
 	.entry-header {
 		display: flex;
@@ -97,8 +92,7 @@
 		li {
 			position: relative;
 			top: 1px;
-			border-bottom-left-radius: 100px;
-			border-bottom-right-radius: 100px;
+			
 			margin: 0px 1px;
 			height: 100%;
 			float: left;
@@ -106,42 +100,39 @@
 			@include desktop {
 				width: 15%;
 			}
+                border-bottom: 1px solid grey;
 		}
 		a {
 			height: 100%;
 			min-height: 25px;
 			width: 100%;
 			text-align: center;
-			padding: 9px 15px;
 			display: inline-block;
-			border-radius: 10px 10px 0 0;
-			background: green;
-			font-size: 16px;
-			font-weight: 600;
-			color: grey;
+			font: 1rem $font__main;
+            font-weight: 400;
 			transition: all linear 0.15s;
 		}
 		a:hover {
 			outline: none;
-			background: green;
+
 			text-decoration: none;
 		}
 	}
 	li.active a,
 	li.active a:hover {
-		border: 1.5px solid lightgray;
-		border-bottom: 0px;
-		background: pink;
+		border-bottom: 1.5px solid $color_red;
+
+
 		outline: none;
-		color: purple;
+
 	}
 	/*----- Content of Tabs -----*/
 	.tab-content {
 		padding: 15px;
 		border-radius: 7px;
 		border-top-left-radius: 2px;
-		border: 1px solid lightgray;
-		background: pink;
+		border: 1px solid $color__background-body;
+
 	}
 	.tab {
 		padding-bottom: 40px;

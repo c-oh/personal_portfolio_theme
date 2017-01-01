@@ -601,6 +601,10 @@ a {
     background-color: #EEC643;
     width: 104px; }
 
+.sp-container {
+  display: -ms-flexbox;
+  display: flex; }
+
 .tabbing-wrapper {
   width: 100%;
   display: -ms-flexbox;
@@ -612,7 +616,6 @@ a {
   display: -ms-inline-flexbox;
   display: inline-flex;
   text-align: center;
-  border: 1.5px green solid;
   box-sizing: border-box;
   border-radius: 10px;
   background: pink; }
@@ -620,11 +623,6 @@ a {
     border-bottom-left-radius: 10px;
     border-top-left-radius: 10px;
     background: pink; }
-  .tabbing-section .rightsection {
-    background: green;
-    border-radius: 9px; }
-  .tabbing-section .inactive {
-    color: green; }
   .tabbing-section .active {
     color: pink;
     margin: auto; }
@@ -643,7 +641,7 @@ a {
     padding-left: 8px; }
 
 .site-content {
-  background: grey; }
+  background: #fff; }
 
 .entry-header {
   display: -ms-flexbox;
@@ -693,12 +691,11 @@ a {
   .tab-links li {
     position: relative;
     top: 1px;
-    border-bottom-left-radius: 100px;
-    border-bottom-right-radius: 100px;
     margin: 0px 1px;
     height: 100%;
     float: left;
-    list-style: none; }
+    list-style: none;
+    border-bottom: 1px solid grey; }
     @media (min-width: 1000px) {
       .tab-links li {
         width: 15%; } }
@@ -707,34 +704,25 @@ a {
     min-height: 25px;
     width: 100%;
     text-align: center;
-    padding: 9px 15px;
     display: inline-block;
-    border-radius: 10px 10px 0 0;
-    background: green;
-    font-size: 16px;
-    font-weight: 600;
-    color: grey;
+    font: 1rem "roboto" sans-serif;
+    font-weight: 400;
     transition: all linear 0.15s; }
   .tab-links a:hover {
     outline: none;
-    background: green;
     text-decoration: none; }
 
 li.active a,
 li.active a:hover {
-  border: 1.5px solid lightgray;
-  border-bottom: 0px;
-  background: pink;
-  outline: none;
-  color: purple; }
+  border-bottom: 1.5px solid #B80C09;
+  outline: none; }
 
 /*----- Content of Tabs -----*/
 .tab-content {
   padding: 15px;
   border-radius: 7px;
   border-top-left-radius: 2px;
-  border: 1px solid lightgray;
-  background: pink; }
+  border: 1px solid #fff; }
 
 .tab {
   padding-bottom: 40px;
