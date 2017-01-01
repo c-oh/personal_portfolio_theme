@@ -1,0 +1,152 @@
+
+	.tabbing-wrapper {
+		width: 100%;
+		display: flex;
+		padding-bottom: 50px;
+	}
+	.tabbing-section {
+		margin: 0px auto;
+		display: inline-flex;
+		text-align: center;
+		border: 1.5px green solid;
+		box-sizing: border-box;
+		border-radius: 10px;
+		background: pink;
+		.leftsection {
+			border-bottom-left-radius: 10px;
+			border-top-left-radius: 10px;
+			background: pink;
+		}
+		.rightsection {
+			background: green;
+			border-radius: 9px;
+		}
+		.inactive {
+			color: green;
+		}
+		.active {
+			color: pink;
+			margin: auto;
+			&:hover {
+				color: yellow;
+			}
+		}
+		a {
+			display: flex;
+			align-self: center;
+			font-size: 15px;
+		}
+		a:first-child {
+			padding: 8px 0px;
+			padding-right: 10px;
+		}
+		a:last-child {
+			padding-left: 8px;
+		}
+	}
+	.site-content {
+		background: grey;
+	}
+	.entry-header {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		padding-top: 110px;
+		h1 {
+			padding-top: 90px;
+			font-size: 36px;
+			letter-spacing: 1.8pt
+		}
+		img {
+			width: 200px;
+			height: 200px;
+		}
+		.entry-title {
+			width: 100%;
+			padding-left: 5%;
+			margin-bottom: 90px;
+		}
+	}
+	.entry-content {
+		width: 90%;
+		margin: 0 auto;
+		font-size: 24px;
+	}
+	/*----- Tabs -----*/
+	.tabs {
+		width: 95%;
+		margin: 0 auto;
+		padding-bottom: 50px;
+		@include desktop {
+			padding-bottom: 0;
+		}
+		p {
+			word-wrap: break-word;
+			margin: 0;
+		}
+	}
+	/*----- Tab Links -----*/
+	/* Clearfix */
+	.tab-links {
+		margin: 0;
+		&:after {
+			display: block;
+			clear: both;
+			content: '';
+		}
+		li {
+			position: relative;
+			top: 1px;
+			border-bottom-left-radius: 100px;
+			border-bottom-right-radius: 100px;
+			margin: 0px 1px;
+			height: 100%;
+			float: left;
+			list-style: none;
+			@include desktop {
+				width: 15%;
+			}
+		}
+		a {
+			height: 100%;
+			min-height: 25px;
+			width: 100%;
+			text-align: center;
+			padding: 9px 15px;
+			display: inline-block;
+			border-radius: 10px 10px 0 0;
+			background: green;
+			font-size: 16px;
+			font-weight: 600;
+			color: grey;
+			transition: all linear 0.15s;
+		}
+		a:hover {
+			outline: none;
+			background: green;
+			text-decoration: none;
+		}
+	}
+	li.active a,
+	li.active a:hover {
+		border: 1.5px solid lightgray;
+		border-bottom: 0px;
+		background: pink;
+		outline: none;
+		color: purple;
+	}
+	/*----- Content of Tabs -----*/
+	.tab-content {
+		padding: 15px;
+		border-radius: 7px;
+		border-top-left-radius: 2px;
+		border: 1px solid lightgray;
+		background: pink;
+	}
+	.tab {
+		padding-bottom: 40px;
+		display: none;
+	}
+	.tab.active {
+		display: block;
+	}

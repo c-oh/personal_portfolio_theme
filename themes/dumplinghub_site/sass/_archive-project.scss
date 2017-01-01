@@ -1,0 +1,13 @@
+.project-info{
+    position:absolute;
+    .project-title{
+    font: 2rem $font__main;
+    color: white;
+    font-weight: 200;
+}
+
+.project-button{
+    @include buttons;
+        width: 104px;
+}
+}

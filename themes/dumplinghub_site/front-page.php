@@ -18,7 +18,7 @@ get_header(); ?>
       </p>
     </div>
     <div class= "front-button">
-      <a href="#" class="button">Learn More</a>
+      <a href="resume" class="button">Learn More</a>
       </div>
     <div class="front-image">
       <h2> image of electronic devices </h2>

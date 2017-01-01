@@ -16,12 +16,56 @@ get_header(); ?>
 					<h2 class="single-project-title">
 						<?php the_title();?>
 					</h2>
-					<p class="sp-description" <?php the_content();?> </>
-				</div>
-			</section>
-			<?php
+					<?php endwhile; // End of the loop. ?>
+			<?php 
+			$tab_one_name = CFS()->get( 'project_tab1' );
+			$tab_two_name =CFS()->get( 'project_tab2' );
+			$tab_three_name =CFS()->get( 'project_tab3' );
 			?>
-				<?php endwhile; // End of the loop. ?>
+					<?php if ($tab_one_name == true || $tab_two_name == true || $tab_three_name == true ): ?>
+					<div class="tabs">
+						<ul class="tab-links">
+							<li class="active">
+								<?php if  ($tab_one_name == true): ?>
+								<a href="#tab1">
+									<?php echo $tab_one_name ?>
+								</a>
+							</li>
+							<li>
+								<?php endif ?>
+								<?php if ($tab_two_name == true): ?>
+								<a href="#tab2">
+									<?php echo $tab_two_name ?>
+								</a>
+							</li>
+							<li>
+								<?php endif; ?>
+								<?php if ($tab_three_name == true):?>
+								<a href="#tab3">
+									<?php echo $tab_three_name ?>
+								</a>
+							</li>
+							<li>
+								<?php endif ?>
+							</li>
+						</ul>
+						<div class="tab-content">
+							<div id="tab1" class="tab active">
+								<p>
+									<?php echo CFS()->get( 'project_tab1_content' ); ?>
+							</div>
+							<div id="tab2" class="tab">
+								<p>
+									<?php echo CFS()->get( 'project_tab2_content' ); ?>
+							</div>
+							<div id="tab3" class="tab">
+								<p>
+									<?php echo CFS()->get( 'project_tab3_content' ); ?>
+							</div>
+						</div>
+					</div>
+			</section>
+			<?php endif; ?>
 		</main>
 		<!-- #main -->
 	</section>
