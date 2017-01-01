@@ -430,12 +430,8 @@ a {
   transition: all 0.5s ease; }
   a:visited {
     color: #000; }
-  a:hover, a:focus, a:active {
-    color: #FBFEFB; }
   a:focus {
     outline: thin dotted; }
-  a:hover, a:active {
-    outline: 0; }
 
 /* Menus */
 .site-header {
@@ -601,7 +597,16 @@ a {
     background-color: #EEC643;
     width: 104px; }
 
-@media (min-width: 600px) {
+.sp-container .extra-detail {
+  display: -ms-flexbox;
+  display: flex;
+  margin: 15px 0; }
+  .sp-container .extra-detail p {
+    margin: 0;
+    padding-left: 20px;
+    color: #0021FF; }
+
+@media (min-width: 1000px) {
   .sp-container {
     display: -ms-flexbox;
     display: flex;
@@ -611,6 +616,15 @@ a {
       width: 45%; }
     .sp-container .sp-info {
       width: 50%; } }
+
+.sp-container .single-project-title {
+  text-align: center;
+  font: 2em "roboto" sans-serif;
+  margin: 0;
+  color: #0021FF; }
+  @media (min-width: 1000px) {
+    .sp-container .single-project-title {
+      text-align: left; } }
 
 .tabbing-wrapper {
   width: 100%;
@@ -692,10 +706,11 @@ a {
     height: 100%;
     float: left;
     list-style: none;
+    width: 33%;
     border-bottom: 1px solid #383F49; }
     @media (min-width: 1000px) {
       .tab-links li {
-        width: 15%; } }
+        width: 22%; } }
   .tab-links a {
     height: 100%;
     min-height: 25px;
@@ -721,7 +736,9 @@ li.active a:hover {
   display: none; }
 
 .tab-content {
-  padding-top: 20px; }
+  padding-top: 20px;
+  font: 1rem "roboto" sans-serif;
+  color: #383F49; }
 
 .tab.active {
   display: block; }

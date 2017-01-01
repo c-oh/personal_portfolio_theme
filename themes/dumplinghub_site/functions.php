@@ -56,16 +56,16 @@ add_action( 'after_setup_theme', 'dumplinghub_site_content_width', 0 );
  */
 function dumplinghub_site_widgets_init() {
 	register_sidebar( array(
-		'name'          => esc_html( 'Sidebar' ),
-		'id'            => 'sidebar-1',
+		'name'          => esc_html( 'Image carousel' ),
+		'id'            => 'carousels',
 		'description'   => '',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
 	) );
 }
 add_action( 'widgets_init', 'dumplinghub_site_widgets_init' );
+
+
 
 /**
  * Filter the stylesheet_uri to output the minified CSS file.

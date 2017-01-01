@@ -12,18 +12,11 @@ a {
 	&:visited {
 		color: $color_black;
 	}
-	&:hover,
-	&:focus,
-	&:active {
-		color: $color-lightgrey
-	}
+	
 	&:focus {
 		outline: thin dotted;
 	}
-	&:hover,
-	&:active {
-		outline: 0;
-	}
+	
 }
 
 

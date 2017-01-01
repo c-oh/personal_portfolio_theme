@@ -11,11 +11,41 @@ get_header(); ?>
 			<section class="sp-container">
 				<div class="sp-thumbnail">
 					<?php the_post_thumbnail( 'category-thumb'); ?>
-				</div>
+				
+
+<!--carousel of images -->
+
+<div class="carousel-section">
+		<div class="container">
+			<?php dynamic_sidebar( 'carousels' ); ?>
+			<?php $gallery_images = CFS()->get('project_picture');?>
+			<?php if( !empty( $gallery_images) ): ?>
+				<div class="main-carousel" data-flickity='{ "cellAlign": "left", "contain": true }'>
+					<?php foreach ($gallery_images as $image): ?>
+						<?php if (!empty($image)): ?>
+							<div class="carousel-cell">
+								<div class="cell-wrapper" style="background-image:url(<?php echo $image["project_image"]; ?>) ">
+											<? endif; ?>
+										</a>
+									</div>
+								</div>
+						<?php endforeach; ?>
+					</div>
+				<?php endif; ?>
+			</div>
+		</div>
+		<!--end -->
+</div>
+
 				<div class="sp-info">
 					<h2 class="single-project-title">
 						<?php the_title();?>
 					</h2>
+					<div class= "extra-detail">
+       <i class="fa fa-globe" aria-hidden="true"></i> 
+	   <p> <?php echo CFS()->get( 'extra_detail'); ?>
+      </p>
+	  </div>
 					<?php endwhile; // End of the loop. ?>
 			<?php 
 			$tab_one_name = CFS()->get( 'project_tab1' );
