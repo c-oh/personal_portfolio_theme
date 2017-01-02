@@ -772,8 +772,7 @@ li.active a:hover {
     color: #141414;
     background-color: #EEC643; }
 
-/* Style the buttons that are used to open and close the accordion panel */
-button.accordion {
+.accordion {
   background-color: #eee;
   color: #444;
   cursor: pointer;
@@ -782,23 +781,31 @@ button.accordion {
   text-align: left;
   border: none;
   outline: none;
-  transition: 0.4s; }
+  transition: 0.4s;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between; }
+  .accordion div {
+    display: -ms-flexbox;
+    display: flex; }
+    .accordion div img {
+      width: 50px;
+      height: 50px; }
+  .accordion:active:hover {
+    background-color: #EEC643; }
+  .accordion:active:after {
+    content: '\02795';
+    font-size: 13px;
+    color: #777;
+    float: right;
+    padding-top: 20px; }
 
-/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-button.accordion.active, button.accordion:hover {
-  background-color: #ddd; }
-
-/* Style the accordion panel. Note: hidden by default */
-div.panel {
-  padding: 0 18px;
-  background-color: white;
-  display: none; }
+.accordion.active:after {
+  content: "\2796"; }
 
 /* The "show" class is added to the accordion panel when the user clicks on one of the buttons. This will show the panel content */
-div.panel.show {
-  display: block; }
-
-div.panel {
+.panel {
   padding: 0 18px;
   background-color: white;
   max-height: 0;
@@ -806,9 +813,10 @@ div.panel {
   transition: 0.6s ease-in-out;
   opacity: 0; }
 
-div.panel.show {
+.panel.show {
   opacity: 1;
-  max-height: 1200px; }
+  max-height: 1200px;
+  display: block; }
 
 /*.resume-body {
     margin-top: 45px;
