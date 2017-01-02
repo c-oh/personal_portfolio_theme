@@ -1,6 +1,7 @@
 .resume-top {
     text-align: center;
     text-transform: uppercase;
+    padding-bottom: 30px;
     h1 {
         font: 2.5rem $font__main;
         font-weight: 100;
@@ -11,111 +12,99 @@
 }
 
 .resume-body {
-margin-top: 25px;
+    @include desktop {
+        display: none;
+    }
+    .accordion {
+        background-color: transparent;
+        font: 1rem $font__main;
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        text-align: left;
+        border: none;
+        outline: none;
+        transition: 0.4s;
+        display: flex;
+        justify-content: space-between;
+        @include desktop {
+            background-color: white;
+        }
+        div {
+            display: flex;
+            img {
+                width: 50px;
+                height: 50px;
+            }
+            p {
+                padding-left: 20px;
+            }
+        }
+        &:hover {
+            background-color: $color_cream;
+        }
+        &:after {
+            content: '\02795';
+            font-size: 13px;
+            float: right;
+            padding-top: 20px;
+        }
+    }
+    .accordion.active {
+        background-color: $color_cream;
+        &:after {
+            content: "\2796";
+        }
+    }
+    /* The "show" class is added to the accordion panel when the user clicks on one of the buttons. This will show the panel content */
+    .panel {
+        padding: 0 18px;
+        background-color: white;
+        max-height: 0;
+        overflow: hidden;
+        transition: 0.6s ease-in-out;
+        opacity: 0;
+    }
+    .panel.show {
+        opacity: 1;
+        max-height: 1200px;
+        display: block;
+        background-color: $color-lightgrey;
+    }
 }
 
-.accordion {
-    background-color: transparent;
-    font: 1rem $font__main;
-    cursor: pointer;
-    padding: 18px;
-    width: 100%;
-    text-align: left;
-    border: none;
-    outline: none;
-    transition: 0.4s;
+.resume-new {
+    display: none;
+    @include desktop {
+        display: flex;
+.right-container{
+    margin-left: 20px;
     display: flex;
     justify-content: space-between;
-    @include desktop{
-        background-color: white;
-    }
-    div {
-        display: flex;
-        img {
-            width: 50px;
-            height: 50px;
-        }
-        p{
-            padding-left: 20px;
-        }
-    }
-    &:hover {
-        background-color: $color_cream;
-    }
-    &:after {
-        content: '\02795';
-        font-size: 13px;
-        float: right;
-        padding-top: 20px;
-    
-    }
+    flex-direction: column;
 }
-
-
-.accordion.active {
-    background-color: $color_cream;
-    &:after{
-        content: "\2796";
-    }
-}
-
-
-/* The "show" class is added to the accordion panel when the user clicks on one of the buttons. This will show the panel content */
-
-.panel {
-    padding: 0 18px;
-    background-color: white;
-    max-height: 0;
-    overflow: hidden;
-    transition: 0.6s ease-in-out;
-    opacity: 0;
-}
-
-.panel.show {
-    opacity: 1;
-    max-height: 1200px;
-    display: block;
-    background-color: $color-lightgrey;
-}
-
-
-
-/*.resume-body {
-    margin-top: 45px;
-    .skills,
-    .education,
-    .soft-skills,
-    .work-experience {
-        display: flex;
-        img {
-            height: 60px;
-            width: 60px;
-            margin-right: 10px;
-        }
-        h1 {
-            font: 1.5rem $font__main;
-            font-weight: 300;
-        }
-        p {
-            font: 1rem $font__main;
-            color: $color_footer;
-            line-height: 30px;
-        }
-    }
-    .skills,
-    .education {
-        background-color: $color-cream;
-    }
-    @include tablet {
-        display: flex;
-        flex-wrap: wrap;
-        .work-experience,
         .skills,
+        .education,
         .soft-skills,
-        .education {
-            width: 50%;
+        .work-experience {
+            display: flex;
+            img {
+                height: 60px;
+                width: 60px;
+                margin-right: 10px;
+            }
+            h1 {
+                font: 1.5rem $font__main;
+                font-weight: 300;
+            }
+            p {
+                font: 1rem $font__main;
+                color: $color_footer;
+                line-height: 30px;
+            }
         }
         .work-experience {
+            width: 50%;
             background-color: $color-cream;
         }
         .skills {
@@ -125,10 +114,11 @@ margin-top: 25px;
                 columns: 2;
                 -webkit-columns: 2;
                 -moz-columns: 2;
+                        padding:0;
                 li:before {
                     content: "• ";
                 }
             }
         }
     }
-} */
+}

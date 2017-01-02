@@ -15,7 +15,7 @@
 
 })( jQuery );
 
-//for tabing section
+//for tabing section of project pages
 jQuery(document).ready(function() {
 	jQuery('.tabs .tab-links a').on('click', function(e)  {
 		var currentAttrValue = jQuery(this).attr('href');
@@ -31,13 +31,17 @@ jQuery(document).ready(function() {
 });
 
 
-/* Toggle between adding and removing the "active" and "show" classes when the user clicks on one of the "Section" buttons. The "active" class is used to add a background color to the current button when its belonging panel is open. The "show" class is used to open the specific accordion panel */
+//For the mobile resume acordion menu (including the switch)
 var acc = document.getElementsByClassName("accordion");
 var i;
 
-for (i = 0; i < acc.length; i++) {
+
+        for (i = 0; i < acc.length; i++) {
     acc[i].onclick = function(){
         this.classList.toggle("active");
         this.nextElementSibling.classList.toggle("show");
     }
-}
+}   
+
+
+ 

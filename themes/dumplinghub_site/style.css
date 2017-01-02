@@ -761,7 +761,8 @@ li.active a:hover {
 
 .resume-top {
   text-align: center;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  padding-bottom: 30px; }
   .resume-top h1 {
     font: 2.5rem "roboto" sans-serif;
     font-weight: 100; }
@@ -773,113 +774,113 @@ li.active a:hover {
     background-color: #EEC643; }
 
 .resume-body {
-  margin-top: 25px; }
-
-.accordion {
-  background-color: transparent;
-  font: 1rem "roboto" sans-serif;
-  cursor: pointer;
-  padding: 18px;
-  width: 100%;
-  text-align: left;
-  border: none;
-  outline: none;
-  transition: 0.4s;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: justify;
-      justify-content: space-between; }
+  /* The "show" class is added to the accordion panel when the user clicks on one of the buttons. This will show the panel content */ }
   @media (min-width: 1000px) {
-    .accordion {
-      background-color: white; } }
-  .accordion div {
+    .resume-body {
+      display: none; } }
+  .resume-body .accordion {
+    background-color: transparent;
+    font: 1rem "roboto" sans-serif;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
     display: -ms-flexbox;
-    display: flex; }
-    .accordion div img {
-      width: 50px;
-      height: 50px; }
-    .accordion div p {
-      padding-left: 20px; }
-  .accordion:hover {
+    display: flex;
+    -ms-flex-pack: justify;
+        justify-content: space-between; }
+    @media (min-width: 1000px) {
+      .resume-body .accordion {
+        background-color: white; } }
+    .resume-body .accordion div {
+      display: -ms-flexbox;
+      display: flex; }
+      .resume-body .accordion div img {
+        width: 50px;
+        height: 50px; }
+      .resume-body .accordion div p {
+        padding-left: 20px; }
+    .resume-body .accordion:hover {
+      background-color: #EEC643; }
+    .resume-body .accordion:after {
+      content: '\02795';
+      font-size: 13px;
+      float: right;
+      padding-top: 20px; }
+  .resume-body .accordion.active {
     background-color: #EEC643; }
-  .accordion:after {
-    content: '\02795';
-    font-size: 13px;
-    float: right;
-    padding-top: 20px; }
+    .resume-body .accordion.active:after {
+      content: "\2796"; }
+  .resume-body .panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.6s ease-in-out;
+    opacity: 0; }
+  .resume-body .panel.show {
+    opacity: 1;
+    max-height: 1200px;
+    display: block;
+    background-color: #FBFEFB; }
 
-.accordion.active {
-  background-color: #EEC643; }
-  .accordion.active:after {
-    content: "\2796"; }
-
-/* The "show" class is added to the accordion panel when the user clicks on one of the buttons. This will show the panel content */
-.panel {
-  padding: 0 18px;
-  background-color: white;
-  max-height: 0;
-  overflow: hidden;
-  transition: 0.6s ease-in-out;
-  opacity: 0; }
-
-.panel.show {
-  opacity: 1;
-  max-height: 1200px;
-  display: block;
-  background-color: #FBFEFB; }
-
-/*.resume-body {
-    margin-top: 45px;
-    .skills,
-    .education,
-    .soft-skills,
-    .work-experience {
+.resume-new {
+  display: none; }
+  @media (min-width: 1000px) {
+    .resume-new {
+      display: -ms-flexbox;
+      display: flex; }
+      .resume-new .right-container {
+        margin-left: 20px;
+        display: -ms-flexbox;
         display: flex;
-        img {
-            height: 60px;
-            width: 60px;
-            margin-right: 10px;
-        }
-        h1 {
-            font: 1.5rem $font__main;
-            font-weight: 300;
-        }
-        p {
-            font: 1rem $font__main;
-            color: $color_footer;
-            line-height: 30px;
-        }
-    }
-    .skills,
-    .education {
-        background-color: $color-cream;
-    }
-    @include tablet {
-        display: flex;
-        flex-wrap: wrap;
-        .work-experience,
-        .skills,
-        .soft-skills,
-        .education {
-            width: 50%;
-        }
-        .work-experience {
-            background-color: $color-cream;
-        }
-        .skills {
-            background-color: white;
-            ul {
-                list-style-type: none;
-                columns: 2;
-                -webkit-columns: 2;
-                -moz-columns: 2;
-                li:before {
-                    content: "• ";
-                }
-            }
-        }
-    }
-} */
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+      .resume-new .skills,
+      .resume-new .education,
+      .resume-new .soft-skills,
+      .resume-new .work-experience {
+        display: -ms-flexbox;
+        display: flex; }
+        .resume-new .skills img,
+        .resume-new .education img,
+        .resume-new .soft-skills img,
+        .resume-new .work-experience img {
+          height: 60px;
+          width: 60px;
+          margin-right: 10px; }
+        .resume-new .skills h1,
+        .resume-new .education h1,
+        .resume-new .soft-skills h1,
+        .resume-new .work-experience h1 {
+          font: 1.5rem "roboto" sans-serif;
+          font-weight: 300; }
+        .resume-new .skills p,
+        .resume-new .education p,
+        .resume-new .soft-skills p,
+        .resume-new .work-experience p {
+          font: 1rem "roboto" sans-serif;
+          color: #383F49;
+          line-height: 30px; }
+      .resume-new .work-experience {
+        width: 50%;
+        background-color: #EEC643; }
+      .resume-new .skills {
+        background-color: white; }
+        .resume-new .skills ul {
+          list-style-type: none;
+          columns: 2;
+          -webkit-columns: 2;
+          -moz-columns: 2;
+          padding: 0; }
+          .resume-new .skills ul li:before {
+            content: "• "; } }
+
 /*--------------------------------------------------------------
 # Widgets
 --------------------------------------------------------------*/
