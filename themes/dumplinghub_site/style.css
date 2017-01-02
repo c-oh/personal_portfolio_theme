@@ -792,17 +792,14 @@ li.active a:hover {
     .accordion div img {
       width: 50px;
       height: 50px; }
-  .accordion:active:hover {
+  .accordion:hover {
     background-color: #EEC643; }
-  .accordion:active:after {
+  .accordion:after {
     content: '\02795';
     font-size: 13px;
     color: #777;
     float: right;
     padding-top: 20px; }
-
-.accordion.active:after {
-  content: "\2796"; }
 
 /* The "show" class is added to the accordion panel when the user clicks on one of the buttons. This will show the panel content */
 .panel {
@@ -817,6 +814,9 @@ li.active a:hover {
   opacity: 1;
   max-height: 1200px;
   display: block; }
+
+.accordion.active:after {
+  content: "\2796"; }
 
 /*.resume-body {
     margin-top: 45px;

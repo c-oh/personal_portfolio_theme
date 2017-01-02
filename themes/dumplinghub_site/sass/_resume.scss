@@ -10,6 +10,7 @@
     }
 }
 
+
 .accordion {
     background-color: #eee;
     color: #444;
@@ -29,7 +30,7 @@
             height: 50px;
         }
     }
-    &:active{
+    &:active{}
     &:hover {
         background-color: $color_cream;
     }
@@ -42,11 +43,7 @@
 }
     }
 
-}
 
-.accordion.active:after {
-    content: "\2796";
-}
 
 /* The "show" class is added to the accordion panel when the user clicks on one of the buttons. This will show the panel content */
 
@@ -67,6 +64,10 @@
 }
 
 
+
+.accordion.active:after {
+    content: "\2796";
+}
 
 
 /*.resume-body {
