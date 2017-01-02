@@ -1096,61 +1096,70 @@ object {
   text-align: center;
   font: 1rem "roboto" sans-serif; }
 
-.page-id-31 .entry-header {
-  display: none; }
-
-.page-id-31 .entry-content {
+.contact-content {
   text-align: center; }
-  .page-id-31 .entry-content h1 {
-    font-size: 3rem;
-    color: midnightblue;
-    text-align: center; }
-  .page-id-31 .entry-content p {
-    color: #666;
-    line-height: 35px; }
-
-.page-id-31 .entry-content {
-  font: 1rem "roboto" sans-serif; }
-
-.page-id-31 [type="text"], .page-id-31 input[type="email"] {
-  width: 100%;
-  height: 40px;
-  font: 1rem "roboto" sans-serif; }
-
-.page-id-31 input[type="submit"] {
-  padding: 10px;
-  border: 1px solid #EEC643;
-  border-radius: 10%;
-  color: #141414;
-  background-color: #EEC643; }
-  .page-id-31 input[type="submit"]:hover {
-    background-color: transparent;
-    color: #B80C09;
-    border: 2px solid midnightblue; }
-
-.widget-area {
-  display: none; }
-
-.wpcf7-form {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap; }
-
-.wpcf7 .wpcf7-text,
-.wpcf7 .wpcf7-textarea {
-  text-indent: 30px; }
-
-.wpcf7 p {
-  position: relative; }
-
-.wpcf7 p .fa {
-  position: absolute;
-  color: #cdcac3;
-  z-index: 100;
-  font-size: 18px;
-  top: 22%;
-  left: 3%; }
-
-.wpcf7 p .fa-pencil {
-  top: 4%; }
+  .contact-content .contact-hero h1 {
+    display: none; }
+  .contact-content .contact-title {
+    font: "roboto" sans-serif; }
+    .contact-content .contact-title h1 {
+      font-size: 3rem;
+      color: #0021FF;
+      text-align: center;
+      font-weight: 200;
+      text-transform: uppercase; }
+    .contact-content .contact-title h3 {
+      color: #666;
+      line-height: 35px;
+      font-weight: 100; }
+  .contact-content .contact-info {
+    display: none; }
+    @media (min-width: 600px) {
+      .contact-content .contact-info {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
+        font: "roboto" sans-serif; }
+        .contact-content .contact-info p {
+          color: #666; }
+          .contact-content .contact-info p i {
+            padding-right: 10px;
+            color: #B80C09; }
+          .contact-content .contact-info p span {
+            color: #666; } }
+  .contact-content .message-box [type="text"], .contact-content .message-box input[type="email"] {
+    width: 100%;
+    height: 40px;
+    font: 1rem "roboto" sans-serif; }
+  .contact-content .message-box input[type="submit"] {
+    padding: 10px;
+    border: 1px solid #EEC643;
+    border-radius: 10%;
+    color: #141414;
+    background-color: #EEC643; }
+    .contact-content .message-box input[type="submit"]:hover {
+      background-color: transparent;
+      color: #B80C09;
+      border: 2px solid midnightblue; }
+  .contact-content .message-box .widget-area {
+    display: none; }
+  .contact-content .message-box .wpcf7-form {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+  .contact-content .message-box .wpcf7 .wpcf7-text,
+  .contact-content .message-box .wpcf7 .wpcf7-textarea {
+    text-indent: 30px; }
+  .contact-content .message-box .wpcf7 p {
+    position: relative; }
+  .contact-content .message-box .wpcf7 p .fa {
+    position: absolute;
+    color: #cdcac3;
+    z-index: 100;
+    font-size: 18px;
+    top: 22%;
+    left: 3%; }
+  .contact-content .message-box .wpcf7 p .fa-pencil {
+    top: 4%; }
