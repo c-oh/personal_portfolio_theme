@@ -772,9 +772,12 @@ li.active a:hover {
     color: #141414;
     background-color: #EEC643; }
 
+.resume-body {
+  margin-top: 25px; }
+
 .accordion {
-  background-color: #eee;
-  color: #444;
+  background-color: transparent;
+  font: 1rem "roboto" sans-serif;
   cursor: pointer;
   padding: 18px;
   width: 100%;
@@ -786,20 +789,29 @@ li.active a:hover {
   display: flex;
   -ms-flex-pack: justify;
       justify-content: space-between; }
+  @media (min-width: 1000px) {
+    .accordion {
+      background-color: white; } }
   .accordion div {
     display: -ms-flexbox;
     display: flex; }
     .accordion div img {
       width: 50px;
       height: 50px; }
+    .accordion div p {
+      padding-left: 20px; }
   .accordion:hover {
     background-color: #EEC643; }
   .accordion:after {
     content: '\02795';
     font-size: 13px;
-    color: #777;
     float: right;
     padding-top: 20px; }
+
+.accordion.active {
+  background-color: #EEC643; }
+  .accordion.active:after {
+    content: "\2796"; }
 
 /* The "show" class is added to the accordion panel when the user clicks on one of the buttons. This will show the panel content */
 .panel {
@@ -813,10 +825,8 @@ li.active a:hover {
 .panel.show {
   opacity: 1;
   max-height: 1200px;
-  display: block; }
-
-.accordion.active:after {
-  content: "\2796"; }
+  display: block;
+  background-color: #FBFEFB; }
 
 /*.resume-body {
     margin-top: 45px;

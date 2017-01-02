@@ -13,7 +13,7 @@
 <section class="resume-body">
 
 <div class="work-experience">
-<button class="accordion"> <div><img src="<?php echo get_template_directory_uri() . '/assets/images/screwdriver.png'; ?>" alt="Icon of gear" /> <p> <?php echo CFS()->get( 'work_experience_header'); ?> </div></p></button>
+<button class="accordion"> <div><img src="<?php echo get_template_directory_uri() . '/assets/images/screwdriver.png'; ?>" alt="Icon of gear" /> <p> <?php echo CFS()->get( 'work_experience_header'); ?></p> </div></button>
 <div class="panel">
   <p>    <?php echo CFS()->get( 'work_experience'); ?></p>
 </div>
@@ -23,6 +23,7 @@
 <button class="accordion"><div> <div><img src="<?php echo get_template_directory_uri() . '/assets/images/pen.png'; ?>" alt="Icon of pen" />  <p><?php echo CFS()->get( 'skills_header'); ?> </p></div></button>
 <div class="panel">
   <p><?php echo CFS()->get( 'skills'); ?></p>
+</div>
 </div>
 
  <div class="soft-skills">
