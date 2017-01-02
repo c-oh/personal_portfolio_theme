@@ -11,43 +11,20 @@ get_header(); ?>
 			<section class="sp-container">
 				<div class="sp-thumbnail">
 					<?php the_post_thumbnail( 'category-thumb'); ?>
-				
-
-<!--carousel of images -->
-
-<div class="carousel-section">
-		<div class="container">
-			<?php dynamic_sidebar( 'carousels' ); ?>
-			<?php $gallery_images = CFS()->get('project_picture');?>
-			<?php if( !empty( $gallery_images) ): ?>
-				<div class="main-carousel" data-flickity='{ "cellAlign": "left", "contain": true }'>
-					<?php foreach ($gallery_images as $image): ?>
-						<?php if (!empty($image)): ?>
-							<div class="carousel-cell">
-								<div class="cell-wrapper" style="background-image:url(<?php echo $image["project_image"]; ?>) ">
-											<? endif; ?>
-										</a>
-									</div>
-								</div>
-						<?php endforeach; ?>
-					</div>
-				<?php endif; ?>
-			</div>
-		</div>
-		<!--end -->
-</div>
+				</div>
 
 				<div class="sp-info">
 					<h2 class="single-project-title">
 						<?php the_title();?>
 					</h2>
-					<div class= "extra-detail">
-       <i class="fa fa-globe" aria-hidden="true"></i> 
-	   <p> <?php echo CFS()->get( 'extra_detail'); ?>
-      </p>
-	  </div>
+					<div class="extra-detail">
+						<i class="fa fa-globe" aria-hidden="true"></i>
+						<p>
+							<?php echo CFS()->get( 'extra_detail'); ?>
+						</p>
+					</div>
 					<?php endwhile; // End of the loop. ?>
-			<?php 
+					<?php 
 			$tab_one_name = CFS()->get( 'project_tab1' );
 			$tab_two_name =CFS()->get( 'project_tab2' );
 			$tab_three_name =CFS()->get( 'project_tab3' );
@@ -76,8 +53,7 @@ get_header(); ?>
 								</a>
 							</li>
 							
-								<?php endif ?>
-					
+							<?php endif ?>
 						</ul>
 						<div class="tab-content">
 							<div id="tab1" class="tab active">
@@ -98,6 +74,16 @@ get_header(); ?>
 			<?php endif; ?>
 		</main>
 		<!-- #main -->
+		<!--carousel of images -->
+				<div class="carousel-section">
+					<div class="container">
+						<?php dynamic_sidebar( 'carousels' ); ?>
+						<?php $gallery_images = CFS()->get('project_picture');?>
+						<?php if( !empty( $gallery_images) ): ?>
+						<?php endif; ?>
+					</div>
+				</div>
+				<!--end -->
 	</section>
 	<!-- #primary -->
 	<?php get_footer(); ?>

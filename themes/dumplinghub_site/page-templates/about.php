@@ -4,6 +4,9 @@
 
 
 <section class= "about-content">
+    <div class= "about-hero">
+        <h1>About</h1>
+    </div>
 <div class="text-section">
 <p class= "defintion">
  <?php echo CFS()->get( 'defintion'); ?>
@@ -13,9 +16,7 @@
      <?php echo CFS()->get( 'about_description'); ?>
      </p>
 </div>
-<div class= "about-picture">
-<h1>picture of a map</h1>
-</div>
+
  </section>
 
 <!-- #primary -->

@@ -23,12 +23,15 @@
                 font-size: 4rem;
             }
             @include desktop {
-                font-size: 4rem;
+                font-size: 5rem;
             }
             span:before {
                 @include tablet {
                     content: '\a';
                     white-space: pre;
+                }
+                @include desktop{
+                    content: '';
                 }
             }
         }
@@ -40,7 +43,10 @@
         line-height: 30px;
         font-weight: 100;
         @include tablet {
-            width: 300px;
+            width: 343px;
+        }
+        @include desktop{
+                width: 409px;
         }
     }
     h2 {
@@ -54,8 +60,11 @@
             text-align: right;
             padding-top: 0;
         }
+        @include desktop{
+            margin-top: -43px;
+        }
         img {
-            width: 400px;
+            width: 73%;
         }
     }
     .front-button a {

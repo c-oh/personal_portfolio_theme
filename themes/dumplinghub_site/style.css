@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*!
 Theme Name: Dumplinghub Site Theme
 Theme URI: http://underscores.me/
@@ -374,11 +375,14 @@ table {
           font-size: 4rem; } }
       @media (min-width: 1000px) {
         .front-content .title .large {
-          font-size: 4rem; } }
+          font-size: 5rem; } }
       @media (min-width: 600px) {
         .front-content .title .large span:before {
           content: '\a';
           white-space: pre; } }
+      @media (min-width: 1000px) {
+        .front-content .title .large span:before {
+          content: ''; } }
   .front-content .front-description p {
     color: #383F49;
     padding: 0;
@@ -387,7 +391,10 @@ table {
     font-weight: 100; }
     @media (min-width: 600px) {
       .front-content .front-description p {
-        width: 300px; } }
+        width: 343px; } }
+    @media (min-width: 1000px) {
+      .front-content .front-description p {
+        width: 409px; } }
   .front-content h2 {
     display: none; }
   .front-content .front-image {
@@ -400,8 +407,11 @@ table {
             order: 0;
         text-align: right;
         padding-top: 0; } }
+    @media (min-width: 1000px) {
+      .front-content .front-image {
+        margin-top: -43px; } }
     .front-content .front-image img {
-      width: 400px; }
+      width: 73%; }
   .front-content .front-button a {
     padding: 10px;
     border: 1px solid #EEC643;
@@ -417,7 +427,7 @@ table {
     line-height: 40px;
     font: 1rem "roboto" sans-serif;
     font-weight: 100; }
-  .about-content .about-picture h1 {
+  .about-content .about-hero h1 {
     display: none; }
 
 /*--------------------------------------------------------------
@@ -613,9 +623,9 @@ a {
     -ms-flex-pack: justify;
         justify-content: space-between; }
     .sp-container .sp-thumbnail {
-      width: 45%; }
+      width: 55%; }
     .sp-container .sp-info {
-      width: 50%; } }
+      width: 40%; } }
 
 .sp-container .single-project-title {
   text-align: center;
@@ -743,6 +753,12 @@ li.active a:hover {
 .tab.active {
   display: block; }
 
+.site-mainsproject {
+  height: 650px; }
+  @media (min-width: 1000px) {
+    .site-mainsproject {
+      height: 356px; } }
+
 .resume-top {
   text-align: center;
   text-transform: uppercase; }
@@ -756,53 +772,96 @@ li.active a:hover {
     color: #141414;
     background-color: #EEC643; }
 
-.resume-body {
-  margin-top: 45px; }
-  .resume-body .skills,
-  .resume-body .education,
-  .resume-body .soft-skills,
-  .resume-body .work-experience {
-    display: -ms-flexbox;
-    display: flex; }
-    .resume-body .skills img,
-    .resume-body .education img,
-    .resume-body .soft-skills img,
-    .resume-body .work-experience img {
-      height: 60px;
-      width: 60px;
-      margin-right: 10px; }
-    .resume-body .skills h1,
-    .resume-body .education h1,
-    .resume-body .soft-skills h1,
-    .resume-body .work-experience h1 {
-      font: 1.5rem "roboto" sans-serif;
-      font-weight: 300; }
-    .resume-body .skills p,
-    .resume-body .education p,
-    .resume-body .soft-skills p,
-    .resume-body .work-experience p {
-      font: 1rem "roboto" sans-serif;
-      color: #383F49;
-      line-height: 30px; }
-  .resume-body .skills,
-  .resume-body .education {
-    background-color: #EEC643; }
-  @media (min-width: 600px) {
-    .resume-body {
-      display: -ms-flexbox;
-      display: flex;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap; }
-      .resume-body .work-experience,
-      .resume-body .skills,
-      .resume-body .soft-skills,
-      .resume-body .education {
-        width: 50%; }
-      .resume-body .work-experience {
-        background-color: #EEC643; }
-      .resume-body .skills {
-        background-color: white; } }
+/* Style the buttons that are used to open and close the accordion panel */
+button.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s; }
 
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+button.accordion.active, button.accordion:hover {
+  background-color: #ddd; }
+
+/* Style the accordion panel. Note: hidden by default */
+div.panel {
+  padding: 0 18px;
+  background-color: white;
+  display: none; }
+
+/* The "show" class is added to the accordion panel when the user clicks on one of the buttons. This will show the panel content */
+div.panel.show {
+  display: block; }
+
+div.panel {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.6s ease-in-out;
+  opacity: 0; }
+
+div.panel.show {
+  opacity: 1;
+  max-height: 1200px; }
+
+/*.resume-body {
+    margin-top: 45px;
+    .skills,
+    .education,
+    .soft-skills,
+    .work-experience {
+        display: flex;
+        img {
+            height: 60px;
+            width: 60px;
+            margin-right: 10px;
+        }
+        h1 {
+            font: 1.5rem $font__main;
+            font-weight: 300;
+        }
+        p {
+            font: 1rem $font__main;
+            color: $color_footer;
+            line-height: 30px;
+        }
+    }
+    .skills,
+    .education {
+        background-color: $color-cream;
+    }
+    @include tablet {
+        display: flex;
+        flex-wrap: wrap;
+        .work-experience,
+        .skills,
+        .soft-skills,
+        .education {
+            width: 50%;
+        }
+        .work-experience {
+            background-color: $color-cream;
+        }
+        .skills {
+            background-color: white;
+            ul {
+                list-style-type: none;
+                columns: 2;
+                -webkit-columns: 2;
+                -moz-columns: 2;
+                li:before {
+                    content: "• ";
+                }
+            }
+        }
+    }
+} */
 /*--------------------------------------------------------------
 # Widgets
 --------------------------------------------------------------*/
@@ -815,6 +874,66 @@ li.active a:hover {
 /* Search widget. */
 .widget_search .search-submit {
   display: none; }
+
+.cell-wrapper {
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; }
+  @media (min-width: 1000px) {
+    .cell-wrapper {
+      background-blend-mode: luminosity; }
+      .cell-wrapper:hover {
+        background-blend-mode: normal; }
+        .cell-wrapper:hover .overley {
+          display: none; } }
+
+.main-carousel {
+  display: -ms-flexbox;
+  display: flex; }
+  .main-carousel .carousel-cell {
+    width: 25%;
+    height: 150px;
+    padding: 10px; }
+    .main-carousel .carousel-cell a {
+      height: 100%;
+      width: 100%; }
+      .main-carousel .carousel-cell a img {
+        height: 100%;
+        width: 100%;
+        max-width: 100%; }
+      .main-carousel .carousel-cell a .overley {
+        position: absolute;
+        bottom: 50%;
+        right: 50%;
+        transform: translate(50%, 50%);
+        display: none; }
+        @media (min-width: 1000px) {
+          .main-carousel .carousel-cell a .overley {
+            display: block; } }
+      .main-carousel .carousel-cell a p {
+        -ms-flex-item-align: center;
+            align-self: center;
+        text-align: center;
+        font-size: 20px;
+        display: -ms-flexbox;
+        display: flex;
+        margin: 0;
+        padding: 10px;
+        color: pink; }
+
+.carousel-section {
+  height: 314px; }
+
+.wp-posts-carousel-slide .wp-posts-carousel-container {
+  box-shadow: none !important;
+  background: none !important; }
+
+.widgettitle {
+  text-align: center;
+  font: 1.5rem "roboto" sans-serif;
+  font-weight: bold; }
 
 /*--------------------------------------------------------------
 # Content

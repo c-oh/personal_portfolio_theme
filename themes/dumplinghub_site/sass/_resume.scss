@@ -10,7 +10,55 @@
     }
 }
 
-.resume-body {
+/* Style the buttons that are used to open and close the accordion panel */
+button.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+button.accordion.active, button.accordion:hover {
+    background-color: #ddd;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+div.panel {
+    padding: 0 18px;
+    background-color: white;
+    display: none;
+}
+
+/* The "show" class is added to the accordion panel when the user clicks on one of the buttons. This will show the panel content */
+div.panel.show {
+    display: block;
+}
+
+div.panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.6s ease-in-out;
+    opacity: 0;
+}
+
+div.panel.show {
+    opacity: 1;
+    max-height: 1200px; 
+}
+
+
+
+
+
+/*.resume-body {
     margin-top: 45px;
     .skills,
     .education,
@@ -22,11 +70,11 @@
             width: 60px;
             margin-right: 10px;
         }
-        h1{
+        h1 {
             font: 1.5rem $font__main;
             font-weight: 300;
         }
-        p{
+        p {
             font: 1rem $font__main;
             color: $color_footer;
             line-height: 30px;
@@ -50,6 +98,15 @@
         }
         .skills {
             background-color: white;
+            ul {
+                list-style-type: none;
+                columns: 2;
+                -webkit-columns: 2;
+                -moz-columns: 2;
+                li:before {
+                    content: "• ";
+                }
+            }
         }
     }
-}
+} */

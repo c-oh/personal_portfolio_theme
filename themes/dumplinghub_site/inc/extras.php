@@ -57,16 +57,28 @@ add_filter( 'get_the_excerpt', 'dumplinghub_site_trim_excerpt' );
 
 
 
-//Custom front page image
+//Custom about page image
 
-function my_background_method() {
-
-	if(!is_page_template( 'front-page.php' )){
-		return;
-	}
-
-	$url = CFS()->get( 'front_page_photo' );//This is grabbing the background image via Custom Field Suite Plugi;
-	wp_add_inline_style( 'dumplinghub-site-style' );
+function my_styles_method() {
+    
+    if(!is_page_template( 'page-templates/about.php' )){
+        return;
+    }
+    $url = CFS()->get('background_image');
+    $custom_css = "
+    .about-hero {
+        background-image: linear-gradient( to bottom, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.4) 100% ), url( {$url});
+    }";
+    wp_add_inline_style( 'dumpling-hub-style', $custom_css );
 }
+add_action( 'wp_enqueue_scripts', 'my_styles_method' );
 
-add_action( 'wp_enqueue_scripts', 'my_background_method' );
+//get all projects archive
+function get_all_project_posts( $query ) {
+	if(is_post_type_archive('project') && !is_admin() && $query->is_main_query()) {
+		$query->set('posts_per_page', '16');
+		$query->set('orderby', 'title');
+		$query->set('order' , 'rand');
+	}
+}
+add_action( 'pre_get_posts', 'get_all_project_posts');

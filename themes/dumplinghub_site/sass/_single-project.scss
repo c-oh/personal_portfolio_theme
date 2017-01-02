@@ -12,10 +12,10 @@
         display: flex;
         justify-content: space-between;
         .sp-thumbnail {
-            width: 45%
+            width: 55%
         }
         .sp-info {
-        width: 50%;
+        width: 40%;
         
         }
     }
@@ -170,4 +170,13 @@ li.active a:hover {
 }
 .tab.active {
     display: block;
+}
+
+
+
+.site-mainsproject{
+  height: 650px;
+  @include desktop{
+      height: 356px;
+  }
 }
