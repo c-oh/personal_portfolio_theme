@@ -418,7 +418,8 @@ table {
     border-radius: 2em;
     color: #141414;
     background-color: #EEC643;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    font-weight: 100; }
 
 .about-content {
   display: -ms-flexbox;
@@ -607,6 +608,7 @@ a {
     color: #141414;
     background-color: #EEC643;
     text-transform: uppercase;
+    font-weight: 100;
     width: 150px;
     text-align: center; }
 
@@ -776,7 +778,8 @@ li.active a:hover {
     border-radius: 2em;
     color: #141414;
     background-color: #EEC643;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    font-weight: 100; }
 
 .resume-body {
   /* The "show" class is added to the accordion panel when the user clicks on one of the buttons. This will show the panel content */ }
@@ -898,6 +901,31 @@ li.active a:hover {
 /* Search widget. */
 .widget_search .search-submit {
   display: none; }
+
+.error-404 {
+  text-align: center;
+  font: "roboto" sans-serif; }
+  .error-404 .page-content {
+    margin: 0; }
+    .error-404 .page-content .page-title {
+      font-size: 3rem;
+      margin: 0;
+      font-weight: bold;
+      color: #0021FF; }
+    .error-404 .page-content p {
+      font-size: 1.5rem; }
+    .error-404 .page-content .home-link {
+      font-size: 1rem;
+      margin: 39px; }
+      .error-404 .page-content .home-link a {
+        border: 1px solid #EEC643;
+        padding: 10px;
+        border-radius: 2em;
+        color: #141414;
+        background-color: #EEC643;
+        text-transform: uppercase;
+        font-weight: 100;
+        padding: 12px 35px; }
 
 .cell-wrapper {
   height: 100%;
@@ -1127,14 +1155,17 @@ object {
       text-transform: uppercase; }
       @media (min-width: 1000px) {
         .contact-content .contact-title h1 {
-          font-size: 2rem; } }
+          font-size: 2rem;
+          font-weight: 400; } }
     .contact-content .contact-title h3 {
       color: #666;
       line-height: 35px;
       font-weight: 100; }
       @media (min-width: 1000px) {
         .contact-content .contact-title h3 {
-          text-align: left; } }
+          text-align: left;
+          line-height: 30px;
+          font-size: 1rem; } }
   .contact-content .contact-info {
     display: block; }
     .contact-content .contact-info p {
@@ -1196,6 +1227,7 @@ object {
     color: #141414;
     background-color: #EEC643;
     text-transform: uppercase;
+    font-weight: 100;
     margin: auto;
     width: 200px; }
     .message-box .contact-button input[type="submit"]:hover {
@@ -1234,7 +1266,7 @@ object {
   .message-box .wpcf7-form .wpcf7-not-valid-tip {
     color: #0021FF;
     font: 0.75rem "roboto" sans-serif; }
-  .message-box .wpcf7-form .wpcf7-response-output {
+  .message-box .wpcf7-form .wpcf7-response-output, .message-box .wpcf7-form .screen-reader-response {
     border: none;
     color: #B80C09;
     font: 1rem "roboto" sans-serif; }

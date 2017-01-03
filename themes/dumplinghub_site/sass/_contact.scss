@@ -22,6 +22,7 @@
              text-transform: uppercase;
              @include desktop {
                  font-size: 2rem;
+                 font-weight: 400;
              }
          }
          h3 {
@@ -30,6 +31,8 @@
              font-weight: 100;
              @include desktop {
                  text-align: left;
+                line-height: 30px;
+                font-size: 1rem;
              }
          }
      }
@@ -134,7 +137,7 @@
              color: $color-blue;
              font: 0.75rem $font__main;
          }
-         .wpcf7-response-output {
+         .wpcf7-response-output, .screen-reader-response {
              border: none;
              color: $color_red;
              font: 1rem $font__main;

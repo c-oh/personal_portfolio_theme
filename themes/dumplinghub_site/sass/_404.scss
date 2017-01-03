@@ -1,0 +1,25 @@
+.error-404 {
+    text-align: center;
+    font: $font__main;
+    .page-content{
+        margin: 0;
+    .page-title{   
+        font-size: 3rem;
+        margin: 0;
+            font-weight: bold;
+        color: $color-blue;
+    }
+    p{
+        font-size: 1.5rem;
+    } 
+    .home-link{
+        font-size: 1rem;
+        margin: 39px;
+     a {
+        @include buttons;
+            padding: 12px 35px;
+
+    }
+}
+}
+}
