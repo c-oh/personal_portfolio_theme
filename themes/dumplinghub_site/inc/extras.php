@@ -59,19 +59,34 @@ add_filter( 'get_the_excerpt', 'dumplinghub_site_trim_excerpt' );
 
 //Custom about page image
 
-function my_styles_method() {
+function about_page_method() {
     
     if(!is_page_template( 'page-templates/about.php' )){
         return;
     }
-    $url = CFS()->get('background_image');
+    $url = CFS()->get('about_image');
     $custom_css = "
     .about-hero {
         background-image: linear-gradient( to bottom, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.4) 100% ), url( {$url});
     }";
-    wp_add_inline_style( 'dumpling-hub-style', $custom_css );
+    wp_add_inline_style( 'dumpling_hub-style', $custom_css );
 }
-add_action( 'wp_enqueue_scripts', 'my_styles_method' );
+add_action( 'wp_enqueue_scripts', 'about_page_method' );
+
+//custom contact page imagegd
+function contact_page_method() {
+    
+    if(!is_page_template( 'page-templates/contact.php' )){
+        return;
+    }
+    $url = CFS()->get('contact_image');
+    $custom_css = "
+    .contact-hero {
+        background-image: linear-gradient( to bottom, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.4) 100% ), url( {$url});
+    }";
+    wp_add_inline_style( 'dumpling_hub-style', $custom_css );
+}
+add_action( 'wp_enqueue_scripts', 'contact_page_method' );
 
 //get all projects archive
 function get_all_project_posts( $query ) {
