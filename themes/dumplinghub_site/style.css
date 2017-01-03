@@ -413,11 +413,12 @@ table {
     .front-content .front-image img {
       width: 73%; }
   .front-content .front-button a {
-    padding: 10px;
     border: 1px solid #EEC643;
-    border-radius: 10%;
+    padding: 10px;
+    border-radius: 2em;
     color: #141414;
-    background-color: #EEC643; }
+    background-color: #EEC643;
+    text-transform: uppercase; }
 
 .about-content {
   display: -ms-flexbox;
@@ -600,12 +601,14 @@ a {
     color: white;
     font-weight: 200; }
   .project-info .project-button {
-    padding: 10px;
     border: 1px solid #EEC643;
-    border-radius: 10%;
+    padding: 10px;
+    border-radius: 2em;
     color: #141414;
     background-color: #EEC643;
-    width: 104px; }
+    text-transform: uppercase;
+    width: 150px;
+    text-align: center; }
 
 .sp-container .extra-detail {
   display: -ms-flexbox;
@@ -767,11 +770,13 @@ li.active a:hover {
     font: 2.5rem "roboto" sans-serif;
     font-weight: 100; }
   .resume-top button {
-    padding: 10px;
+    width: 250px;
     border: 1px solid #EEC643;
-    border-radius: 10%;
+    padding: 10px;
+    border-radius: 2em;
     color: #141414;
-    background-color: #EEC643; }
+    background-color: #EEC643;
+    text-transform: uppercase; }
 
 .resume-body {
   /* The "show" class is added to the accordion panel when the user clicks on one of the buttons. This will show the panel content */ }
@@ -1118,7 +1123,6 @@ object {
     .contact-content .contact-title h1 {
       font-size: 3rem;
       color: #0021FF;
-      text-align: center;
       font-weight: 200;
       text-transform: uppercase; }
       @media (min-width: 1000px) {
@@ -1128,8 +1132,25 @@ object {
       color: #666;
       line-height: 35px;
       font-weight: 100; }
+      @media (min-width: 1000px) {
+        .contact-content .contact-title h3 {
+          text-align: left; } }
   .contact-content .contact-info {
-    display: none; }
+    display: block; }
+    .contact-content .contact-info p {
+      text-transform: lowercase;
+      letter-spacing: 0;
+      color: #666; }
+      .contact-content .contact-info p i {
+        color: #B80C09;
+        margin: 0 17px; }
+      .contact-content .contact-info p span {
+        text-transform: uppercase;
+        letter-spacing: 2px; }
+      .contact-content .contact-info p .contact-info-title {
+        margin-right: 20px; }
+      .contact-content .contact-info p fa fa-phone {
+        margin-right: 30px; }
     @media (min-width: 600px) {
       .contact-content .contact-info {
         display: -ms-flexbox;
@@ -1137,77 +1158,83 @@ object {
         -ms-flex-pack: distribute;
             justify-content: space-around;
         font: "roboto" sans-serif; } }
-  @media (min-width: 600px) and (min-width: 1000px) {
-    .contact-content .contact-info {
-      -ms-flex-direction: column;
-          flex-direction: column; } }
-    @media (min-width: 600px) {
-        .contact-content .contact-info p {
-          text-transform: lowercase;
-          letter-spacing: 0;
-          color: #666; }
-          .contact-content .contact-info p i {
-            color: #B80C09;
-            margin: 0 17px; }
-          .contact-content .contact-info p span {
-            text-transform: uppercase;
-            letter-spacing: 2px; } }
-  @media (min-width: 1000px) {
-    .contact-content .message-box {
-      width: 50%; } }
-  .contact-content .message-box [type="text"],
-  .contact-content .message-box input[type="email"] {
-    width: 100%;
-    height: 40px;
-    font: 1rem "roboto" sans-serif;
-    width: 100%; }
-  .contact-content .message-box .contact-button {
-    width: 100%; }
-    .contact-content .message-box .contact-button input[type="submit"] {
-      padding: 10px;
-      border: 1px solid #EEC643;
-      border-radius: 10%;
-      color: #141414;
-      background-color: #EEC643;
-      margin: auto;
-      width: 200px;
-      border-radius: 50%;
-      text-transform: uppercase;
-      color: #f1f1f1; }
-      .contact-content .message-box .contact-button input[type="submit"]:hover {
-        background-color: transparent;
-        color: #B80C09;
-        border: 2px solid midnightblue; }
-  .contact-content .message-box .widget-area {
-    display: none; }
-  .contact-content .message-box .wpcf7-form {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -ms-flex-direction: column;
-        flex-direction: column; }
-    @media (min-width: 600px) {
-      .contact-content .message-box .wpcf7-form {
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-        -ms-flex-direction: row;
-            flex-direction: row; }
-        .contact-content .message-box .wpcf7-form .contact-name,
-        .contact-content .message-box .wpcf7-form .contact-email {
-          width: 48%; } }
-  .contact-content .message-box .wpcf7-email,
-  .contact-content .message-box .wpcf7-validates-as-required {
-    text-indent: 35px; }
-  .contact-content .message-box .your-message .wpcf7-textarea {
-    width: 90vw; }
-  .contact-content .message-box .wpcf7 {
-    color: #383F49; }
-    .contact-content .message-box .wpcf7 p {
-      position: relative; }
-      .contact-content .message-box .wpcf7 p .fa {
-        position: absolute;
-        z-index: 100;
-        font-size: 18px;
-        top: 22%;
-        left: 3%; }
+    @media (min-width: 1000px) {
+      .contact-content .contact-info {
+        -ms-flex-direction: column;
+            flex-direction: column;
+        -ms-flex-item-align: start;
+            align-self: flex-start; } }
+
+@media (min-width: 1000px) {
+  .message-box {
+    width: 50%; } }
+
+.message-box input[type="text"],
+.message-box input[type="email"] {
+  width: 100%;
+  height: 40px;
+  font: 1rem "roboto" sans-serif;
+  width: 100%;
+  background-color: #FBFEFB;
+  text-indent: 35px;
+  border: 1px solid #D3D3D3;
+  border-radius: 0.5em; }
+
+.message-box .your-message .wpcf7-textarea {
+  background-color: #FBFEFB;
+  border-radius: 0.4em;
+  border: 1px solid #D3D3D3;
+  border-radius: 0.5em;
+  text-indent: 10px; }
+
+.message-box .contact-button {
+  width: 100%; }
+  .message-box .contact-button input[type="submit"] {
+    border: 1px solid #EEC643;
+    padding: 10px;
+    border-radius: 2em;
+    color: #141414;
+    background-color: #EEC643;
+    text-transform: uppercase;
+    margin: auto;
+    width: 200px; }
+    .message-box .contact-button input[type="submit"]:hover {
+      background-color: transparent;
+      color: #B80C09;
+      border: 2px solid midnightblue; }
+
+.message-box .widget-area {
+  display: none; }
+
+.message-box .wpcf7-form {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  color: #383F49; }
+  @media (min-width: 600px) {
+    .message-box .wpcf7-form {
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+      -ms-flex-direction: row;
+          flex-direction: row; }
+      .message-box .wpcf7-form .contact-name,
+      .message-box .wpcf7-form .contact-email {
+        width: 48%; } }
+  .message-box .wpcf7-form p {
+    position: relative; }
+    .message-box .wpcf7-form p .fa {
+      position: absolute;
+      z-index: 100;
+      font-size: 18px;
+      top: 22%;
+      left: 3%; }
+  .message-box .wpcf7-form .wpcf7-not-valid-tip {
+    color: #0021FF;
+    font: 0.75rem "roboto" sans-serif; }
+  .message-box .wpcf7-form .wpcf7-response-output {
+    border: none;
+    color: #B80C09;
+    font: 1rem "roboto" sans-serif; }

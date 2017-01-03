@@ -18,7 +18,6 @@
          h1 {
              font-size: 3rem;
              color: $color-blue;
-             text-align: center;
              font-weight: 200;
              text-transform: uppercase;
              @include desktop {
@@ -29,29 +28,40 @@
              color: $color__border-abbr;
              line-height: 35px;
              font-weight: 100;
+             @include desktop {
+                 text-align: left;
+             }
          }
      }
      .contact-info {
-         display: none;
+         display: block;
+         p {
+             text-transform: lowercase;
+             letter-spacing: 0;
+             color: $color__border-abbr;
+             i {
+                 color: $color_red;
+                 margin: 0 17px;
+             }
+             span {
+                 text-transform: uppercase;
+                 letter-spacing: 2px;
+             }
+             .contact-info-title{
+                 margin-right: 20px;
+             }
+             fa fa-phone{
+                 margin-right: 30px;
+             }
+         }
          @include tablet {
              display: flex;
              justify-content: space-around;
              font: $font__main;
-             @include desktop {
-                 flex-direction: column;
-             }
-             p {
-                 text-transform: lowercase;
-                 letter-spacing: 0;
-                 color: $color__border-abbr;
-                 i {
-                     color: $color_red;
-                     margin: 0 17px;
-                 }
-                 span {
-                     text-transform: uppercase;
-                     letter-spacing: 2px;
-                 }
+         }
+         @include desktop {
+             flex-direction: column;
+             align-self: flex-start
          }
      }
  }
@@ -61,12 +71,25 @@
      @include desktop {
          width: 50%;
      }
-     [type="text"],
+     input[type="text"],
      input[type="email"] {
          width: 100%;
          height: 40px;
          font: 1rem $font__main;
          width: 100%;
+         background-color: $color-lightgrey;
+         text-indent: 35px;
+         border: 1px solid $color__form-border;
+         border-radius: 0.5em;
+     }
+     .your-message {
+         .wpcf7-textarea {
+             background-color: $color-lightgrey;
+             border-radius: 0.4em;
+             border: 1px solid $color__form-border;
+             border-radius: 0.5em;
+             text-indent: 10px;
+         }
      }
      .contact-button {
          width: 100%;
@@ -74,9 +97,6 @@
              @include buttons;
              margin: auto;
              width: 200px;
-             border-radius: 50%;
-             text-transform: uppercase;
-             color: $color__background-screen;
              &:hover {
                  background-color: transparent;
                  color: $color_red;
@@ -91,6 +111,7 @@
          display: flex;
          flex-wrap: wrap;
          flex-direction: column;
+         color: $color_footer;
          @include tablet {
              justify-content: space-between;
              flex-direction: row;
@@ -99,18 +120,6 @@
                  width: 48%;
              }
          }
-     }
-     .wpcf7-email,
-     .wpcf7-validates-as-required {
-         text-indent: 35px;
-     }
-     .your-message {
-         .wpcf7-textarea {
-             width: 90vw;
-         }
-     }
-     .wpcf7 {
-         color: $color_footer;
          p {
              position: relative;
              .fa {
@@ -121,5 +130,14 @@
                  left: 3%;
              }
          }
+         .wpcf7-not-valid-tip {
+             color: $color-blue;
+             font: 0.75rem $font__main;
+         }
+         .wpcf7-response-output {
+             border: none;
+             color: $color_red;
+             font: 1rem $font__main;
+         }
      }
- }}
+ }
