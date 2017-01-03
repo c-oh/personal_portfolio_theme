@@ -7,7 +7,7 @@
     </div>
 
 <section class= "contact-content">
-    
+<div class= "contact-container">   
 <div class="contact-title">
 
  <h1> <?php echo CFS()->get( 'title'); ?> </h1>
@@ -18,6 +18,8 @@
 <p>Email <i class="fa fa-envelope" aria-hidden="true"></i><span><?php echo CFS()->get( 'email'); ?> </span> </p>
 <p>Phone <i class="fa fa-phone" aria-hidden="true"></i> <span><?php echo CFS()->get( 'phone'); ?> </span></p>
 </div>
+</div> 
+
 <div class= "message-box">
      <?php echo CFS()->get( 'contact_section'); ?>
     
