@@ -424,13 +424,17 @@ table {
 .about-content {
   display: -ms-flexbox;
   display: flex; }
-  .about-content .column {
-    color: #383F49;
-    line-height: 40px;
-    font: 1rem "roboto" sans-serif;
-    font-weight: 100; }
+  @media (min-width: 1000px) {
+    .about-content .about-hero {
+      width: 50%;
+      -ms-flex-order: 1;
+          order: 1; } }
   .about-content .about-hero h1 {
     display: none; }
+  @media (min-width: 1000px) {
+    .about-content .text-section {
+      width: 45%;
+      margin-top: 66px; } }
 
 /*--------------------------------------------------------------
 # Navigation

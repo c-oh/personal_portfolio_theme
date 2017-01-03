@@ -1,16 +1,18 @@
-.about-content{
-display:flex;
-
-.column{
-    color: $color_footer;
-    line-height: 40px;
-    font: 1rem $font__main;
-    font-weight: 100;
-}
-
-.about-hero {
-h1{
-    display:none;
-}
-}
+.about-content {
+    display: flex;
+    .about-hero {
+        @include desktop {
+            width: 50%;
+            order: 1;
+        }
+        h1 {
+            display: none;
+        }
+    }
+    .text-section {
+        @include desktop {
+            width: 45%;
+            margin-top: 66px;
+        }
+    }
 }

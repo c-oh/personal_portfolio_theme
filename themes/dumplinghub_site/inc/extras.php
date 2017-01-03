@@ -69,7 +69,7 @@ function about_page_method() {
     .about-hero {
         background-image: linear-gradient( to bottom, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.4) 100% ), url( {$url});
     }";
-    wp_add_inline_style( 'dumpling_hub-style', $custom_css );
+    wp_add_inline_style( 'dumpling_hub_style', $custom_css );
 }
 add_action( 'wp_enqueue_scripts', 'about_page_method' );
 
@@ -84,7 +84,7 @@ function contact_page_method() {
     .contact-hero {
         background-image: linear-gradient( to bottom, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.4) 100% ), url( {$url});
     }";
-    wp_add_inline_style( 'dumpling_hub-style', $custom_css );
+    wp_add_inline_style( 'dumpling_hub_style', $custom_css );
 }
 add_action( 'wp_enqueue_scripts', 'contact_page_method' );
 
