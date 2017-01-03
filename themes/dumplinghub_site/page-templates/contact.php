@@ -15,8 +15,8 @@
 </div>
 
 <div class= "contact-info">
-<p>Email <i class="fa fa-envelope" aria-hidden="true"></i><span><?php echo CFS()->get( 'email'); ?> </span> </p>
-<p>Phone <i class="fa fa-phone" aria-hidden="true"></i> <span><?php echo CFS()->get( 'phone'); ?> </span></p>
+<p><span class= "contact-info-title">Email</span> <i class="fa fa-envelope" aria-hidden="true"></i><?php echo CFS()->get( 'email'); ?> </p>
+<p><span class= "contact-info-title">Phone</span> <i class="fa fa-phone" aria-hidden="true"></i> <?php echo CFS()->get( 'phone'); ?> </p>
 </div>
 </div> 
 
