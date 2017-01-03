@@ -913,7 +913,8 @@ li.active a:hover {
       font-weight: bold;
       color: #0021FF; }
     .error-404 .page-content p {
-      font-size: 1.5rem; }
+      font-size: 1.5rem;
+      font-weight: 100; }
     .error-404 .page-content .home-link {
       font-size: 1rem;
       margin: 39px; }

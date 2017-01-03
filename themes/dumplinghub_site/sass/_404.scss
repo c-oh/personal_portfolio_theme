@@ -11,6 +11,7 @@
     }
     p{
         font-size: 1.5rem;
+        font-weight: 100;
     } 
     .home-link{
         font-size: 1rem;
@@ -18,7 +19,6 @@
      a {
         @include buttons;
             padding: 12px 35px;
-
     }
 }
 }
