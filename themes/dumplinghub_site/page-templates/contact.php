@@ -3,6 +3,7 @@
 <?php get_header(); ?>
 
 <div class= "contact-hero">
+    <img src="<?php echo get_template_directory_uri() ?>/assets/images/map.png" alt= "avatar"> 
         <h1>Contact</h1>
     </div>
 

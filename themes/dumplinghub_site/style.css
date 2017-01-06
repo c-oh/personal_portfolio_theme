@@ -423,7 +423,13 @@ table {
 
 .about-content {
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column; }
+  @media (min-width: 1000px) {
+    .about-content {
+      -ms-flex-direction: row;
+          flex-direction: row; } }
   @media (min-width: 1000px) {
     .about-content .about-hero {
       width: 50%;
@@ -599,13 +605,22 @@ a {
   content: "";
   display: table; }
 
-.project-info {
-  position: absolute; }
-  .project-info .project-title {
-    font: 2rem "roboto" sans-serif;
-    color: white;
-    font-weight: 200; }
-  .project-info .project-button {
+.post-grid {
+  font: "roboto" sans-serif; }
+  .post-grid .search {
+    height: 38px !important;
+    font-size: 1rem; }
+  .post-grid .item {
+    font-size: 2rem;
+    font-weight: bold; }
+  .post-grid .title {
+    font-size: 2rem;
+    color: #0021FF; }
+  .post-grid .excerpt {
+    font-size: 1rem;
+    font-weight: 100;
+    color: #383F49; }
+  .post-grid .read_more {
     border: 1px solid #EEC643;
     padding: 10px;
     border-radius: 2em;
@@ -613,8 +628,16 @@ a {
     background-color: #EEC643;
     text-transform: uppercase;
     font-weight: 100;
+    padding: 10px !important;
+    font-size: 1.5rem;
+    font-weight: bold;
     width: 150px;
-    text-align: center; }
+    text-align: center;
+    margin: auto;
+    cursor: pointer; }
+    .post-grid .read_more:hover {
+      background-color: #fff;
+      border: 3px solid #EEC643; }
 
 .sp-container .extra-detail {
   display: -ms-flexbox;

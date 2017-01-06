@@ -1,5 +1,9 @@
 .about-content {
     display: flex;
+    flex-direction: column;
+    @include desktop{
+        flex-direction: row;
+    }
     .about-hero {
         @include desktop {
             width: 50%;

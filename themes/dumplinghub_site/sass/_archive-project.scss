@@ -1,14 +1,35 @@
-.project-info{
-    position:absolute;
-    .project-title{
-    font: 2rem $font__main;
-    color: white;
-    font-weight: 200;
-}
-
-.project-button{
-    @include buttons;
+.post-grid {
+    font: $font__main;
+    .search {
+        height: 38px !important;
+        font-size: 1rem;
+    }
+    .item {
+        font-size: 2rem;
+        font-weight: bold;
+    }
+    .title {
+        font-size: 2rem;
+        color: $color-blue;
+    }
+    .excerpt {
+        font-size: 1rem;
+        font-weight: 100;
+        color: $color_footer;
+    }
+    .read_more {
+        @include buttons;
+        padding: 10px !important;
+        font-size: 1.5rem;
+        font-weight: bold;
         width: 150px;
         text-align: center;
-}
+        margin: auto;
+        cursor: pointer;
+        &:hover {
+            background-color: $color__background-body;
+            border: 3px solid $color-cream;
+
+        }
+    }
 }
