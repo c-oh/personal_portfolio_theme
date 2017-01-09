@@ -468,85 +468,123 @@ a {
         justify-content: space-between;
     position: relative; }
 
-.site-branding {
+@media (min-width: 600px) {
+  .container {
+    display: -ms-flexbox;
+    display: flex; } }
+
+.container .site-branding {
   height: 1.5em;
   width: 5em; }
-  .site-branding img {
+  .container .site-branding img {
     height: 49px;
     max-width: 100%; }
     @media (min-width: 600px) {
-      .site-branding img {
+      .container .site-branding img {
         height: 59px; } }
 
-@media (min-width: 600px) {
-  .main-navigation #primary-menu {
-    display: -ms-flexbox !important;
-    display: flex !important; } }
+.container .nav .toggle-button {
+  position: fixed;
+  width: 44px;
+  height: 40px;
+  padding: 4px;
+  transition: .25s;
+  z-index: 15; }
 
-.main-navigation ul {
-  font-size: 1rem;
-  text-transform: uppercase;
-  display: none;
+.container .nav .toggle-button:hover {
+  cursor: pointer; }
+
+.container .nav .toggle-button .menu-bar {
   position: absolute;
-  top: 100%;
-  left: 0;
-  background: #383F49;
-  width: 100vw;
-  height: calc(100vh - 68px);
-  list-style: none;
-  margin: 0;
-  padding-left: 0; }
+  border-radius: 2px;
+  width: 80%;
+  transition: .5s; }
+
+.container .nav .toggle-button .menu-bar-top {
+  border: 4px solid #555;
+  border-bottom: none;
+  top: 0; }
+
+.container .nav .toggle-button .menu-bar-middle {
+  height: 4px;
+  background-color: #555;
+  margin-top: 7px;
+  margin-bottom: 7px;
+  top: 4px; }
+
+.container .nav .toggle-button .menu-bar-bottom {
+  border: 4px solid #555;
+  border-top: none;
+  top: 22px; }
+
+.container .nav .button-open .menu-bar-top {
+  transform: rotate(45deg) translate(8px, 8px);
+  transition: .5s; }
+
+.container .nav .button-open .menu-bar-middle {
+  transform: translate(230px);
+  transition: .1s ease-in;
+  opacity: 0; }
+
+.container .nav .button-open .menu-bar-bottom {
+  transform: rotate(-45deg) translate(8px, -7px);
+  transition: .5s; }
+
+.container .nav .menu-wrap {
+  background-color: #6968AB;
+  position: fixed;
+  top: 0;
+  height: 100%;
+  width: 280px;
+  margin-left: -280px;
+  font-size: 1em;
+  font-weight: 700;
+  overflow: auto;
+  transition: .25s;
+  z-index: 10; }
+
+.container .nav .menu-show {
+  margin-left: 0;
+  box-shadow: 4px 2px 15px 1px #B9ADAD; }
+
+@media (min-width: 600px) {
+  .container .nav {
+    -ms-flex-order: 2;
+        order: 2; } }
+
+.container .nav #primary-menu {
+  text-transform: uppercase; }
   @media (min-width: 600px) {
-    .main-navigation ul {
+    .container .nav #primary-menu {
+      display: -ms-flexbox;
+      display: flex; } }
+
+.container .nav ul {
+  font-size: 1rem;
+  list-style: none; }
+  @media (min-width: 600px) {
+    .container .nav ul {
       overflow: visible;
       background-color: white;
       width: auto;
       position: initial;
       height: 68px; }
-      .main-navigation ul a {
+      .container .nav ul a {
         display: block;
         line-height: 68px;
         padding: 0 10px;
         color: color-blue; }
-        .main-navigation ul a:hover {
+        .container .nav ul a:hover {
           color: white;
           background-color: #383F49; }
-          .main-navigation ul a:hover .highlight-blue {
+          .container .nav ul a:hover .highlight-blue {
             color: #383F49; }
-      .main-navigation ul .menu-item-41 {
+      .container .nav ul .menu-item-41 {
         border: 1px solid black; } }
 
-.main-navigation li.current-menu-item a {
+.container .nav li.current-menu-item a {
   background: #383F49;
   color: #FBFEFB; }
-
-/* Small menu. */
-.menu-toggle,
-.main-navigation.toggled ul {
-  display: block; }
-
-@media (min-width: 600px) {
-  .menu-toggle {
-    display: none; } }
-
-.site-main .comment-navigation, .site-main
-.posts-navigation, .site-main
-.post-navigation {
-  margin: 0 0 1.5em;
-  overflow: hidden; }
-
-.comment-navigation .nav-previous,
-.posts-navigation .nav-previous,
-.post-navigation .nav-previous {
-  float: left;
-  width: 50%; }
-
-.comment-navigation .nav-next,
-.posts-navigation .nav-next,
-.post-navigation .nav-next {
-  float: right;
-  text-align: right;
-  width: 50%; }
 
 /*--------------------------------------------------------------
 # Accessibility
