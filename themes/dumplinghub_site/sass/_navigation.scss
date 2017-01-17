@@ -18,7 +18,7 @@ a {
 }
 
 
-/* Menus */
+/* Containers */
 
 .site-header {
 	width: 90%;
@@ -29,13 +29,11 @@ a {
 		display: flex;
 		justify-content: space-between;
 		position: relative;
-	}
-}
-
-.container {
-	@include tablet {
+		@include tablet {
 		display: flex;
 	}
+	}
+}
 	.site-branding {
 		height: 1.5em;
 		width: 5em;
@@ -47,7 +45,13 @@ a {
 			}
 		}
 	}
+
+/* Navigation bar*/
+
 	.nav {
+		@include tablet {
+			order: 2;
+		}
 		.toggle-button {
 			position: fixed;
 			width: 44px;
@@ -55,9 +59,13 @@ a {
 			padding: 4px;
 			transition: .25s;
 			z-index: 15;
-			@include tablet{
+			@include tablet {
 				display: none;
 			}
+		
+
+
+
 			.menu-bar {
 				position: absolute;
 				border-radius: 2px;
@@ -82,74 +90,88 @@ a {
 				top: 22px;
 			}
 		}
-		.button-open .menu-bar-top {
-			transform: rotate(45deg) translate(8px, 8px);
-			transition: .5s;
+	}
+
+		/* Javascript button class for open menu*/
+
+		.button-open {
+			.menu-bar-top {
+				transform: rotate(45deg) translate(8px, 8px);
+				transition: .5s;
+			}
+			.menu-bar-middle {
+				transform: translate(230px);
+				transition: .1s ease-in;
+				opacity: 0;
+			}
+			.menu-bar-bottom {
+				transform: rotate(-45deg) translate(8px, -7px);
+				transition: .5s;
+			}
 		}
-		.button-open .menu-bar-middle {
-			transform: translate(230px);
-			transition: .1s ease-in;
-			opacity: 0;
-		}
-		.button-open .menu-bar-bottom {
-			transform: rotate(-45deg) translate(8px, -7px);
-			transition: .5s;
-		}
+
+
+		/*the menu section*/
+
 		.menu-wrap {
-			background-color: #6968AB;
+			background-color: white;
 			position: fixed;
 			top: 0;
 			height: 100%;
 			width: 280px;
 			margin-left: -280px;
-			font-size: 1em;
-			font-weight: 700;
+			font-family: $font__main;
 			overflow: auto;
 			transition: .25s;
 			z-index: 10;
 			text-transform: uppercase;
-		}
-		.menu-show {
-			margin-left: 0;
-		}
-		@include tablet {
-			order: 2;
-		}
-		#primary-menu {
 			@include tablet {
-				display: flex;
-			}
-		}
-		ul {
-			font-size: 1rem;
-			list-style: none;
-			@include tablet {
-				overflow: visible;
-				background-color: white;
+				background: $color__background-body;
+				position: static;
 				width: auto;
-				position: initial;
-				height: 68px;
-				a {
-					display: block;
-					line-height: 68px;
-					padding: 0 10px;
-					color: color-blue;
-					&:hover {
-						color: white;
-						background-color: $color_footer;
-						.highlight-blue {
-							color: $color_footer;
+			}
+			ul {
+				font-size: 2rem;
+				line-height: 6rem;
+				list-style: none;
+				@include tablet {
+					font-size: 1rem;
+					overflow: visible;
+					background-color: white;
+					width: auto;
+					position: initial;
+					height: 68px;
+					a {
+						display: block;
+						line-height: 68px;
+						padding: 0 10px;
+						color: color-blue;
+						&:hover {
+							color: white;
+							background-color: $color_footer;
+							.highlight-blue {
+								color: $color_footer;
+							}
 						}
 					}
+					.menu-item-41 {
+						border: 1px solid black;
+					}
 				}
-				.menu-item-41 {
-					border: 1px solid black;
+			}
+			#primary-menu {
+				@include tablet {
+					display: flex;
 				}
 			}
 		}
-		li.current-menu-item a {
-			background: $color_footer;
-			color: $color-lightgrey;
-		}
+	
+	li.current-menu-item a {
+		background: $color_footer;
+		color: $color-lightgrey;
 	}
+	
+	.menu-show {
+    margin-left: 0;
+
 }

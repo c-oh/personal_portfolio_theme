@@ -455,7 +455,7 @@ a {
   a:focus {
     outline: thin dotted; }
 
-/* Menus */
+/* Containers */
 .site-header {
   width: 90%;
   margin: auto;
@@ -467,23 +467,28 @@ a {
     -ms-flex-pack: justify;
         justify-content: space-between;
     position: relative; }
+    @media (min-width: 600px) {
+      .site-header .container {
+        display: -ms-flexbox;
+        display: flex; } }
 
-@media (min-width: 600px) {
-  .container {
-    display: -ms-flexbox;
-    display: flex; } }
-
-.container .site-branding {
+.site-branding {
   height: 1.5em;
   width: 5em; }
-  .container .site-branding img {
+  .site-branding img {
     height: 49px;
     max-width: 100%; }
     @media (min-width: 600px) {
-      .container .site-branding img {
+      .site-branding img {
         height: 59px; } }
 
-.container .nav .toggle-button {
+/* Navigation bar*/
+@media (min-width: 600px) {
+  .nav {
+    -ms-flex-order: 2;
+        order: 2; } }
+
+.nav .toggle-button {
   position: fixed;
   width: 44px;
   height: 40px;
@@ -491,94 +496,95 @@ a {
   transition: .25s;
   z-index: 15; }
   @media (min-width: 600px) {
-    .container .nav .toggle-button {
+    .nav .toggle-button {
       display: none; } }
-  .container .nav .toggle-button .menu-bar {
+  .nav .toggle-button .menu-bar {
     position: absolute;
     border-radius: 2px;
     width: 80%;
     transition: .5s; }
-  .container .nav .toggle-button .menu-bar-top {
+  .nav .toggle-button .menu-bar-top {
     border: 4px solid #555;
     border-bottom: none;
     top: 0; }
-  .container .nav .toggle-button .menu-bar-middle {
+  .nav .toggle-button .menu-bar-middle {
     height: 4px;
     background-color: #555;
     margin-top: 7px;
     margin-bottom: 7px;
     top: 4px; }
-  .container .nav .toggle-button .menu-bar-bottom {
+  .nav .toggle-button .menu-bar-bottom {
     border: 4px solid #555;
     border-top: none;
     top: 22px; }
 
-.container .nav .button-open .menu-bar-top {
+/* Javascript button class for open menu*/
+.button-open .menu-bar-top {
   transform: rotate(45deg) translate(8px, 8px);
   transition: .5s; }
 
-.container .nav .button-open .menu-bar-middle {
+.button-open .menu-bar-middle {
   transform: translate(230px);
   transition: .1s ease-in;
   opacity: 0; }
 
-.container .nav .button-open .menu-bar-bottom {
+.button-open .menu-bar-bottom {
   transform: rotate(-45deg) translate(8px, -7px);
   transition: .5s; }
 
-.container .nav .menu-wrap {
-  background-color: #6968AB;
+/*the menu section*/
+.menu-wrap {
+  background-color: white;
   position: fixed;
   top: 0;
   height: 100%;
   width: 280px;
   margin-left: -280px;
-  font-size: 1em;
-  font-weight: 700;
+  font-family: "roboto" sans-serif;
   overflow: auto;
   transition: .25s;
   z-index: 10;
   text-transform: uppercase; }
-
-.container .nav .menu-show {
-  margin-left: 0; }
-
-@media (min-width: 600px) {
-  .container .nav {
-    -ms-flex-order: 2;
-        order: 2; } }
-
-@media (min-width: 600px) {
-  .container .nav #primary-menu {
-    display: -ms-flexbox;
-    display: flex; } }
-
-.container .nav ul {
-  font-size: 1rem;
-  list-style: none; }
   @media (min-width: 600px) {
-    .container .nav ul {
-      overflow: visible;
-      background-color: white;
-      width: auto;
-      position: initial;
-      height: 68px; }
-      .container .nav ul a {
-        display: block;
-        line-height: 68px;
-        padding: 0 10px;
-        color: color-blue; }
-        .container .nav ul a:hover {
-          color: white;
-          background-color: #383F49; }
-          .container .nav ul a:hover .highlight-blue {
-            color: #383F49; }
-      .container .nav ul .menu-item-41 {
-        border: 1px solid black; } }
+    .menu-wrap {
+      background: #fff;
+      position: static;
+      width: auto; } }
+  .menu-wrap ul {
+    font-size: 2rem;
+    line-height: 6rem;
+    list-style: none; }
+    @media (min-width: 600px) {
+      .menu-wrap ul {
+        font-size: 1rem;
+        overflow: visible;
+        background-color: white;
+        width: auto;
+        position: initial;
+        height: 68px; }
+        .menu-wrap ul a {
+          display: block;
+          line-height: 68px;
+          padding: 0 10px;
+          color: color-blue; }
+          .menu-wrap ul a:hover {
+            color: white;
+            background-color: #383F49; }
+            .menu-wrap ul a:hover .highlight-blue {
+              color: #383F49; }
+        .menu-wrap ul .menu-item-41 {
+          border: 1px solid black; } }
+  @media (min-width: 600px) {
+    .menu-wrap #primary-menu {
+      display: -ms-flexbox;
+      display: flex; } }
 
-.container .nav li.current-menu-item a {
+li.current-menu-item a {
   background: #383F49;
   color: #FBFEFB; }
+
+.menu-show {
+  margin-left: 0; }
 
 /*--------------------------------------------------------------
 # Accessibility
